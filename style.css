@@ -161,7 +161,7 @@ body{
 /*Button*/
 
 .button{
-	font-size: 1.25rem;
+	font-size: 1vw;
 
 	height: 1.2em;
 	text-decoration: none;

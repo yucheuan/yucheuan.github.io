@@ -8,7 +8,12 @@ $('#phaseOne1').click(function() {
 });
 
 
-
+$(document).on('input change', '#slider', function() {
+    $('#slider_value').html( $(this).val() );
+    $('.slides').css({
+        'margin-left': $(this).val()
+    });
+});
 
 
 /*WIP*/
