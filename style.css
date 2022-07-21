@@ -151,7 +151,8 @@ body{
 }
 
 .active{
-
+	display: block;
+	z-index: 1001;
 }
 
 #phaseOneV1{
