@@ -1,27 +1,64 @@
 body{
 	margin: 0;
-	padding: 0;
-	height: 100vh;
-	display:  flex;
-	/*X-axis*/
-	justify-content: center;
-	/*Y-axis*/
-	align-items: center;
-		
-	--viewportWidth: 1080px;
-	--viewportHeight: 660px;
+	padding: 0;			
+	--viewportWidth: 380px;
+	--viewportHeight: 660px;	
+	background-color: #E9E6D9;
 }
 
-.container{background-color: #E9E6D9;}
+.container{
+	display:  flex;
+	width: 100vw;
+	height: 100vh;	
+	overflow: hidden;
+}
 
-/*image slider*/
+.simulationSection{
+	flex: 1 1 56%;
+	align-content: center;
+}
 
-/*img size debug*/
-/*
-.slide{
-	border: 2px solid red;
-	width: 100%;
-}*/
+.manualSection{
+	flex: 1 1 44%;
+	overflow: hidden;	
+}
+
+.videoPlayer{	
+
+	width: auto;
+	/*Make scrollable if out of viewport*/
+	height: 100vh;
+	border-radius: 10px;
+	position: relative;
+}
+
+.slider{
+	width: var(--viewportWidth);
+	/*Make scrollable if out of viewport*/
+	height: 50vh;
+	border-radius: 10px;
+	/*cropping window*/
+	overflow: hidden;
+	object-fit: cover;
+}
+
+.instruction{
+	height: 35vh;
+	border-radius: 10px;
+	object-fit: cover;
+	z-index: ;
+}
+
+.navigationBtn{
+	height: 15vh;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+
+
+
+
 
 /*img fit*/
 .slide.first img{
@@ -37,23 +74,13 @@ body{
 	object-fit: contain;
 }
 
-/*slider viewport*/
-.slider{
-	width: var(--viewportWidth);
-	/*Make scrollable if out of viewport*/
-	height: var(--viewportHeight);
-	border-radius: 10px;
-	/*cropping window*/
-	overflow: hidden;
-}
-
 .slides{
 	/*border: 2px solid black;*/
 	/*control slide div to fit slider viewport*/
 	/*how many images*/
 	width: 600%;
 	/*img size*/
-	height: var(--viewportHeight);
+	height: auto;
 	display:  flex;
 }
 
@@ -122,34 +149,25 @@ body{
 
 /* video player*/
 
-.videox{
-	width: var(--viewportWidth);
-	height: auto;
-	object-fit: contain;	
-}
-
-.videox.first{
-	width: var(--viewportWidth);
-	height: auto;
-	object-fit: contain;	
-}
-
-/*video player viewport*/
-.video.player{
-	width: var(--viewportWidth);
-	/*Make scrollable if out of viewport*/
-	height: auto;
-	border-radius: 10px;
-	/*cropping window*/
-	overflow: hidden;
-}
-
 .videos{
 	/*border: 2px solid black;*/
 	/*control slide div to fit slider viewport*/
 	/*how many images*/
-	width: 600%;
+	width: auto;
 	/*img size*/
-	height: var(--viewportHeight);
-	display:  flex;
+	height: 99vh;
+}
+
+.videox{
+	width: auto;
+	height: 99vh;	
+	position: absolute;
+	left: 50%; 
+    transform: translate(-50%, 0); 
+    display: none;
+    z-index: -1;
+}
+
+#phaseOneV1{
+	display: block;
 }

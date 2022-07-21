@@ -7,73 +7,95 @@
 </head>
 <body>	
 	<div class="container">
-		<!--image slider start-->
-		<div class="slider">
-			<h3>Object Slider</h3>
-			<div class="slides">
-				<!--slide images start-->
-				<div class="slide first"><img id="phaseOne1" src="Assets/Phase1/1.png" alt="" ></div>
-				<div class="slide"><img id="phaseOne2" src="Assets/Phase1/2.png" alt=""></div>
-				<div class="slide"><img id="phaseOne3" src="Assets/Phase1/3.png" alt=""></div>
-				<div class="slide"><img id="phaseOne4" src="Assets/Phase1/4.png" alt=""></div>
-				<div class="slide"><img id="phaseOne5" src="Assets/Phase1/5.png" alt=""></div>
-				<div class="slide"><img id="phaseOne6" src="Assets/Phase1/6.png" alt=""></div>
-				<!--slide images end-->
+		<!--Simulation section start-->
+		<div class="simulationSection">
+			<!--video player start-->
+			<div class="videoPlayer">
+				<h3>Video Simulation</h3>			
 				
-				<!--radio buttons for manual navigation start-->
-				<!--
-				<input type="radio" name="radio-btn" id="radio1">
-				<input type="radio" name="radio-btn" id="radio2">
-				<input type="radio" name="radio-btn" id="radio3">
-				<input type="radio" name="radio-btn" id="radio4">
-				<input type="radio" name="radio-btn" id="radio5">
-				<input type="radio" name="radio-btn" id="radio6">
-				-->
-				<!--radio buttons for manual navigationend-->
+				<div class="videos">
+					<video class="videox" id="phaseOneV1" muted autoplay loop><source src="Assets/Phase1/v1.mp4" type="video/mp4" alt=""></video>
+					<video class="videox" id="phaseOneV2" loop><source src="Assets/Phase1/v2.mp4" type="video/mp4" alt=""></video>
+					<video class="videox" id="phaseOneV3" loop><source src="Assets/Phase1/v3.mp4" type="video/mp4" alt=""></video>
+					<video class="videox" id="phaseOneV4" loop><source src="Assets/Phase1/v4.mp4" type="video/mp4" alt=""></video>
+					<video class="videox" id="phaseOneV5" loop><source src="Assets/Phase1/v5.mp4" type="video/mp4" alt=""></video>
+					<video class="videox" id="phaseOneV6" loop><source src="Assets/Phase1/v6.mp4" type="video/mp4" alt=""></video>		
+				</div>
+				
+			</div>
+			<!--video player end-->
+		</div>
+		<!--Simulation section end-->
 
-				<!--automatic navigation start-->
+
+
+		<!--Munal section start-->
+		<div class="manualSection">
+			<!--image slider start-->
+			<div class="slider">
+				<h3>Object Slider</h3>
+
+				<div class="slides">
+					<!--slide images start-->
 				<!--
-				<div class="navigation-auto">
-					<div class="auto-btn1"></div>
-					<div class="auto-btn2"></div>
-					<div class="auto-btn3"></div>
-					<div class="auto-btn4"></div>
-					<div class="auto-btn5"></div>
-					<div class="auto-btn6"></div>
+					<div class="slide first"><img id="phaseOne1" src="Assets/Phase1/1.png" alt="" ></div>
+					<div class="slide"><img id="phaseOne2" src="Assets/Phase1/2.png" alt=""></div>
+					<div class="slide"><img id="phaseOne3" src="Assets/Phase1/3.png" alt=""></div>
+					<div class="slide"><img id="phaseOne4" src="Assets/Phase1/4.png" alt=""></div>
+					<div class="slide"><img id="phaseOne5" src="Assets/Phase1/5.png" alt=""></div>
+					<div class="slide"><img id="phaseOne6" src="Assets/Phase1/6.png" alt=""></div>
+				-->
+					<!--slide images end-->
+					
+					<!--radio buttons for manual navigation start-->
+					<!--
+					<input type="radio" name="radio-btn" id="radio1">
+					<input type="radio" name="radio-btn" id="radio2">
+					<input type="radio" name="radio-btn" id="radio3">
+					<input type="radio" name="radio-btn" id="radio4">
+					<input type="radio" name="radio-btn" id="radio5">
+					<input type="radio" name="radio-btn" id="radio6">
+					-->
+					<!--radio buttons for manual navigationend-->
+
+					<!--automatic navigation start-->
+					<!--
+					<div class="navigation-auto">
+						<div class="auto-btn1"></div>
+						<div class="auto-btn2"></div>
+						<div class="auto-btn3"></div>
+						<div class="auto-btn4"></div>
+						<div class="auto-btn5"></div>
+						<div class="auto-btn6"></div>
+					</div>
+					-->
+					<!--automatic navigation end-->				
+				</div>	
+				<!--manual navigation start-->
+				<!--
+				<div class="navigation-manual">
+					<label for="radio1" class="manual-btn"></label>
+					<label for="radio2" class="manual-btn"></label>
+					<label for="radio3" class="manual-btn"></label>
+					<label for="radio4" class="manual-btn"></label>
+					<label for="radio5" class="manual-btn"></label>
+					<label for="radio6" class="manual-btn"></label>
 				</div>
 				-->
-				<!--automatic navigation end-->				
-			</div>					
-			<!--manual navigation start-->
-			<!--
-			<div class="navigation-manual">
-				<label for="radio1" class="manual-btn"></label>
-				<label for="radio2" class="manual-btn"></label>
-				<label for="radio3" class="manual-btn"></label>
-				<label for="radio4" class="manual-btn"></label>
-				<label for="radio5" class="manual-btn"></label>
-				<label for="radio6" class="manual-btn"></label>
-			</div>
-			-->
-			<!--manual navigation end-->	
-		</div>	
-		<!--image slider start-->
+				<!--manual navigation end-->	
+			</div>	
+			<!--image slider end-->
 
-		<!--video player start-->
-		<div class="video player">
-			<h3>Video Simulation</h3>			
-
-			<div class="videos">
-				<video class="videox first" id="phaseOneV1" muted autoplay loop><source src="Assets/Phase1/v1.mp4" type="video/mp4" alt=""></video>
-				<video class="videox" id="phaseOneV2" loop><source src="Assets/Phase1/v2.mp4" type="video/mp4" alt=""></video>
-				<video class="videox" id="phaseOneV3" loop><source src="Assets/Phase1/v3.mp4" type="video/mp4" alt=""></video>
-				<video class="videox" id="phaseOneV4" loop><source src="Assets/Phase1/v4.mp4" type="video/mp4" alt=""></video>
-				<video class="videox" id="phaseOneV5" loop><source src="Assets/Phase1/v5.mp4" type="video/mp4" alt=""></video>
-				<video class="videox" id="phaseOneV6" loop><source src="Assets/Phase1/v6.mp4" type="video/mp4" alt=""></video>		
+			<div class="instruction">
+				<h3>instruction</h3>
 			</div>
-			
+
+			<div class="navigationBtn">
+				<h3>navigationBtn</h3>
+			</div>
+
 		</div>
-		<!--video player end-->
+		<!--Manual section end-->		
 	</div>
 	<script src="jQuery.js"></script>
 </body>
