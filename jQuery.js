@@ -1,72 +1,62 @@
 /*Image Slider*/
 $('#phaseOne1').click(function() {
-    //alert("Refresh!"); 
-    $('.slide.first').css({
-        'margin-left': '-20%'
+    $('.slides').css({
+        'margin-left': '0%'
     });
-
-    $('.videox.first').css({
-        'margin-left': '-16.7%'
-    });    
 
     document.getElementById('phaseOneV2').play();
 });
 
+
+
+
+
+/*WIP*/
 $('#phaseOne2').click(function() { 
-    $('.slide.first').css({
-        'margin-left': '-40%'
+    $('.slides').css({
+        'margin-left': '0%'
     });
 
-    $('.videox.first').css({
-        'margin-left': '-33.4%'
-    });
+    /*WIP for video .active*/
+    var currentImg = $('.active');
+    currentImg.removeClass('active').css('z-index', -10);
+    $('#phaseOneV3').addClass('active').css('z-index, 10');
 
     document.getElementById('phaseOneV3').play();
 });
 
-$('#phaseOne3').click(function() {
-    $('.slide.first').css({
-        'margin-left': '-60%'
-    });
 
-    $('.videox.first').css({
-        'margin-left': '-50.1%'
+
+
+
+
+$('#phaseOne3').click(function() {
+    $('.slides').css({
+        'margin-left': '-32%'
     });
 
     document.getElementById('phaseOneV4').play();
 });
 
 $('#phaseOne4').click(function() {
-    $('.slide.first').css({
-        'margin-left': '-80%'
-    });
-
-    $('.videox.first').css({
-        'margin-left': '-66.8%'
+    $('.slides').css({
+        'margin-left': '-61%'
     });
 
     document.getElementById('phaseOneV5').play();
 });
 
 $('#phaseOne5').click(function() {
-    $('.slide.first').css({
+    $('.slides').css({
         'margin-left': '-100%'
-    });
-
-    $('.videox.first').css({
-        'margin-left': '-83.5%'
     });
 
     document.getElementById('phaseOneV6').play();
 });
 
 $('#phaseOne6').click(function() {
-    $('.slide.first').css({
-        'margin-left': '0%'
-    });
-
-    $('.videox.first').css({
-        'margin-left': '0%'
+    $('.slides').css({
+        'margin-left': '-100%'
     });
 
     document.getElementById('phaseOneV1').play();

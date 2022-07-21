@@ -2,9 +2,15 @@ body{
 	margin: 0;
 	padding: 0;			
 	--viewportWidth: 380px;
-	--viewportHeight: 660px;	
+	--viewportHeight: 660px;
+	--viewportMarginRight: 2vw;
+	--viewportMarginRight2: 6vw;
+	--clr-blue: #1939d4;
+	--clr-white: rgba(255, 255, 255, .7);
 	background-color: #E9E6D9;
 }
+
+/*flex-box*/
 
 .container{
 	display:  flex;
@@ -33,119 +39,95 @@ body{
 }
 
 .slider{
-	width: var(--viewportWidth);
-	/*Make scrollable if out of viewport*/
+	/*cropping window size*/
+	/*width: 240px;*/
+	/*viewport*/
 	height: 50vh;
+	margin-right: var(--viewportMarginRight);
 	border-radius: 10px;
-	/*cropping window*/
+	/*cropping window enable*/
 	overflow: hidden;
 	object-fit: cover;
+
+	/*border: 2px solid red;*/
 }
 
 .instruction{
 	height: 35vh;
+	margin-right: var(--viewportMarginRight2);
 	border-radius: 10px;
 	object-fit: cover;
-	z-index: ;
+
+	/*border: 2px solid red;*/
 }
 
 .navigationBtn{
 	height: 15vh;
+	margin-right: var(--viewportMarginRight2);
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	gap: 1.3vw;
 	border-radius: 10px;
 	object-fit: cover;
+
+	/*border: 2px solid red;*/
 }
 
+/*slider*/
 
-
-
-
-
-/*img fit*/
-.slide.first img{
-	width: var(--viewportWidth);
-	height: auto;
-	object-fit: contain;
-	margin-left: 0;
-}
-
-.slide img{
-	width: var(--viewportWidth);
-	height: auto;
-	object-fit: contain;
-}
-
-.slides{
-	/*border: 2px solid black;*/
-	/*control slide div to fit slider viewport*/
-	/*how many images*/
-	width: 600%;
+.slides{	
+	/*control slides div to fit slider viewport*/
+	/*X-distribution*/
+	width: 200%;
 	/*img size*/
-	height: auto;
+	height: 20vh;
 	display:  flex;
-}
-
-.slides input{
-	display: none;
+	margin-top: 6vh;	
+	/*slide movement*/
+	margin-left: 0;	
+	transition: margin-left 2s;
 }
 
 .slide{
-	width: 20%;
-	transition: 2s;
+	/*X-distribution*/
+	width: 100%;
+	position: relative;
 }
 
-/*CSS for manual slide navigation*/
-/*
-.navigation-manual{
+/*img size fit*/
+
+.slide img{
+	width: auto;
+	height: 20vh;	
 	position: absolute;
-	width: var(--viewportWidth);
-	margin-top: -40px;
-	display: flex;
-	justify-content: center;
+	left: 50%; 
+    transform: translate(-50%, 0); 
 }
 
-.manual-btn{
-	border: 2px solid #1C3CD4;
-	padding: 5px;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: 1s;
+.slide.one img{
+	left: 50%;
 }
 
-.manual-btn:not(:last-child){
-	margin-right: 40px;
+.slide.two img{
+	left: 32%;
 }
 
-.manual-btn:hover{
-	background: #1C3CD4;
+.slide.three img{
+	left: 40%;
 }
 
-#radio1:checked ~ .first{
-	margin-left: 0;
+.slide.four img{
+	left: 58%;
 }
 
-#radio2:checked ~ .first{
-	margin-left: -20%;
+.slide.five img{
+	left: 50%;
 }
 
-#radio3:checked ~ .first{
-	margin-left: -40%;
+.slide.six img{
+	left: 35%;
 }
-
-#radio4:checked ~ .first{
-	margin-left: -60%;
-}
-
-#radio5:checked ~ .first{
-	margin-left: -80%;
-}
-
-#radio6:checked ~ .first{
-	margin-left: -100%;
-}*/
-
-
-
-
 
 /* video player*/
 
@@ -168,6 +150,30 @@ body{
     z-index: -1;
 }
 
+.active{
+
+}
+
 #phaseOneV1{
 	display: block;
+}
+
+/*Button*/
+
+.button{
+	font-size: 1.25rem;
+
+	height: 1.2em;
+	text-decoration: none;
+	color: var(--clr-blue);
+	/*border: var(--clr-blue) 0.125em solid;*/
+	background: var(--clr-white);
+	padding: 0.35em 1.2em;
+	border-radius: 0.5em;
+	margin-bottom: 7vh;
+}
+
+.button.main{
+	color: white;
+	background: var(--clr-blue);
 }
