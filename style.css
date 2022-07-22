@@ -1,13 +1,51 @@
+@font-face {
+    font-family: 'open_sans';
+    src:local('OpenSans-Light-webfont.woff'), 
+    	url('./Assets/Fonts/OpenSans-Light-webfont.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src:local('OpenSans-Regular-webfont.woff'),  
+    	url('./Assets/Fonts/OpenSans-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src:local('OpenSans-Semibold-webfont.woff'),  
+    	url('./Assets/Fonts/OpenSans-Semibold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body{
+	font-family: "open_sans";
 	margin: 0;
 	padding: 0;			
-	--viewportWidth: 380px;
-	--viewportHeight: 660px;
 	--viewportMarginRight: 2vw;
-	--viewportMarginRight2: 6vw;
+	--viewportMarginRight2: 5.3vw;
+	--viewportMarginLeft: 4vw;
 	--clr-blue: #1939d4;
 	--clr-white: rgba(255, 255, 255, .7);
 	background-color: #E9E6D9;
+}
+
+h3{
+	font-size: 1.25vw;
+	margin-top: 15%;
+	margin-bottom: 7.5%;
+	color: var(--clr-blue);
+}
+
+p{
+	font-weight: normal;
+	font-size: 1vw;
+	margin-top: 0;
+	color: var(--clr-blue);
 }
 
 /*flex-box*/
@@ -20,12 +58,13 @@ body{
 }
 
 .simulationSection{
-	flex: 1 1 56%;
+	flex: 1 1 55%;
 	align-content: center;
+	position: relative;
 }
 
 .manualSection{
-	flex: 1 1 44%;
+	flex: 1 1 45%;
 	overflow: hidden;	
 }
 
@@ -54,6 +93,7 @@ body{
 
 .instruction{
 	height: 35vh;
+	display: flex;
 	margin-right: var(--viewportMarginRight2);
 	border-radius: 10px;
 	object-fit: cover;
@@ -83,7 +123,7 @@ body{
 	/*img size*/
 	height: 20vh;
 	display:  flex;
-	margin-top: 6vh;	
+	margin-top: 8vh;	
 	/*slide movement*/
 	margin-left: 0;	
 	transition: margin-left 2s;
@@ -129,6 +169,32 @@ body{
 	left: 35%;
 }
 
+/*info panel*/
+
+.panelOne{
+	width: 5vh;
+	height: 15vh;
+	background: var(--clr-white);	
+	position: absolute;
+	top: 8vh;
+	left: var(--viewportMarginLeft);
+
+	font-size: 1vw;
+	border-radius: 0.5em;
+}
+
+.panelTwo{	
+	width: 22vh;
+	height: 22vh;
+	background: var(--clr-white);	
+	position: absolute;
+	bottom: 7vh;
+	left: var(--viewportMarginLeft);
+
+	font-size: 1vw;
+	border-radius: 0.5em;
+}
+
 /* video player*/
 
 .videos{
@@ -152,11 +218,61 @@ body{
 
 .active{
 	display: block;
-	z-index: 1001;
+	/*z-index: 1001;*/
 }
 
 #phaseOneV1{
 	display: block;
+}
+
+/*Steps*/
+
+.column{
+	text-align: center;
+	flex: 1 1 30%;
+
+	/*border: 2px solid blue;*/
+}
+
+.column.gap{
+	color: var(--clr-blue);
+	flex: 1 1 5%;
+
+	font-size: 1.8vw;
+
+	height: 1.5em;
+	width: 1.5em;
+	line-height: 1.5em;	
+}
+
+.column.long{
+	flex: 1 1 30%;
+}
+
+.step{
+	font-size: 1.8vw;
+
+	height: 1.5em;
+	width: 1.5em;
+	line-height: 1.5em;
+	margin: 0 auto;
+	vertical-align: middle;
+	border-radius: 50%;
+	color: var(--clr-blue);
+	background: var(--clr-white);
+}
+
+.step.Active{
+	color: var(--clr-white);
+	background: var(--clr-blue);
+}
+
+.pWrap{
+	text-align: left;
+	margin-right: 2.2vw;
+	margin-left: 2.2vw;
+
+	/*border: 2px solid red;*/
 }
 
 /*Button*/
@@ -165,6 +281,7 @@ body{
 	font-size: 1vw;
 
 	height: 1.2em;
+	line-height: 1.2em;
 	text-decoration: none;
 	color: var(--clr-blue);
 	/*border: var(--clr-blue) 0.125em solid;*/
