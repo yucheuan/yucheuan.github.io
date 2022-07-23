@@ -7,7 +7,15 @@ $('#phaseOne1').click(function() {
     document.getElementById('phaseOneV2').play();
 });
 
+/*range slider button*/
+var slider = document.getElementById('slider');
+var slector = document.getElementById('selector');
 
+slider.oninput = function(){
+    selector.style.left = this.value + "%";
+}
+
+/*range input control slider*/
 $(document).on('input change', '#slider', function() {
     $('#slider_value').html( $(this).val() );
     $('.slides').css({
