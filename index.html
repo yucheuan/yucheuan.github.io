@@ -11,9 +11,9 @@
 		<div class="simulationSection">
 			<div class="panelOne">
 				<div id="planelOneText">
-						<svg class="playIcon"><use href="#playIcon"></use></svg>
-						<svg class="playIcon SpeedOne"><use href="#playIcon SpeedOne"></use></svg>
-						<svg class="playIcon SpeedTwo"><use href="#playIcon SpeedTwo"></use></svg>
+						<svg class="playIcon" id="play"><use href="#playIcon"></use></svg>
+						<svg class="playIcon" id="speedone"><use href="#playIcon SpeedOne"></use></svg>
+						<svg class="playIcon" id="speedtwo"><use href="#playIcon SpeedTwo"></use></svg>
 				</div>
 			</div>
 			<div class="panelTwo">
@@ -47,7 +47,7 @@
 		<div class="manualSection">
 			<!--image slider start-->
 			<div class="slider">				
-				<div class="slides">								
+				<div class="slides" id="slides">						
 					<div class="slide one"><img id="phaseOne1" src="Assets/Phase1/1.png" alt="" ></div>
 					<div class="slide two"><img id="phaseOne2" src="Assets/Phase1/2.png" alt=""></div>				
 					<div class="slide three"><img id="phaseOne3" src="Assets/Phase1/4.png" alt=""></div>
@@ -58,7 +58,10 @@
 
 				<div class="rangeSlider">
 					<div class="rangeSlider width">
-						<input type="range" id="slider" value="-355.0" min="-715.0" max="-5.0" step="1" />
+						<input type="range" id="slider" value="47.25" min="-260.5" max="355" step="-1%" />
+
+<!--how to get value of slides div width to input value-->
+<!--MAC image and video color-->
 
 						<div id="selector">
 							<div class="selectBtn"></div>

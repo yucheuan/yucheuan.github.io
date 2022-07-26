@@ -155,6 +155,8 @@ p{
 	position: absolute;
 	top: 8vh;
 	left: var(--viewportMarginLeft);
+	z-index: 100;
+	cursor: pointer;
 
 	font-size: 1vw;
 	border-radius: 0.5em;
@@ -191,7 +193,7 @@ p{
 .playIcon{
 	width: 60%;
 	height: 28%;	
-	transform: translate(10%, 0)	
+	transform: translate(10%, 0)
 }
 
 #planelTwoText{
@@ -215,6 +217,7 @@ p{
 	/*slide movement*/
 	margin-left: -5px;	
 	transition: margin-left 1.5s;
+	transform:translateX(-364.5px);
 }
 
 .slide{
@@ -238,15 +241,15 @@ p{
 }
 
 .slide.two img{
-	left: 32%;
+	left: 50%;
 }
 
 .slide.three img{
-	left: 40%;
+	left: 50%;
 }
 
 .slide.four img{
-	left: 58%;
+	left: 50%;
 }
 
 .slide.five img{
@@ -254,7 +257,37 @@ p{
 }
 
 .slide.six img{
-	left: 35%;
+	left: 50%;
+}
+
+/*
+.slide.one img{
+	left: 45%;
+}
+
+.slide.two img{
+	left: 27.5%;
+}
+
+.slide.three img{
+	left: 37%;
+}
+
+.slide.four img{
+	left: 54%;
+}
+
+.slide.five img{
+	left: 52%;
+}
+
+.slide.six img{
+	left: 42%;
+}
+*/
+#phaseOne6{
+	width: auto;
+	height: 92%;
 }
 
 .rangeSlider{	
