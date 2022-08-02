@@ -13,7 +13,7 @@ slider.oninput = function(){
 $(document).on('input change', '#slider', function() {
     $('#slider_value').html( $(this).val() );
     $('.slides').css({
-        'margin-left': $(this).val()
+        'margin-left': $(this).val()+'%'
     });
 });
 
@@ -101,7 +101,8 @@ $('#play').click(function(){
                 document.getElementById('phaseOneV1').play();
             }
             else if(document.getElementById('phaseOneV1').played){
-                document.getElementById('phaseOneV1').pause();
+                document.getElementById('phaseOneV1').playbackRate=2.0;
+;
             }
             break;
         case 2:
@@ -146,3 +147,6 @@ $('#play').click(function(){
             break;
     }    
 })
+
+/*CSS transition scale(2)*/
+
