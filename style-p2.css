@@ -213,7 +213,7 @@ p{
 	/*slide movement*/
 	margin-left: -5px;	
 	transition: margin-left 1.5s;
-	transform:translateX(-280px);
+	transform:translateX(70px);
 }
 
 .slide{
@@ -256,31 +256,6 @@ p{
 	left: 50%;
 }
 
-/*
-.slide.one img{
-	left: 45%;
-}
-
-.slide.two img{
-	left: 27.5%;
-}
-
-.slide.three img{
-	left: 37%;
-}
-
-.slide.four img{
-	left: 54%;
-}
-
-.slide.five img{
-	left: 52%;
-}
-
-.slide.six img{
-	left: 42%;
-}
-*/
 #phaseOne6{
 	width: auto;
 	height: 92%;

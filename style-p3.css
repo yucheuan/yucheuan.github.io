@@ -213,7 +213,7 @@ p{
 	/*slide movement*/
 	margin-left: -5px;	
 	transition: margin-left 1.5s;
-	transform:translateX(-280px);
+	transform:translateX(0px);
 }
 
 .slide{

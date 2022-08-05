@@ -2,8 +2,8 @@
 <head>
 	<title>Fitting Room</title>
 
-	<link rel="stylesheet" href="style-p1.css" />
-	<script src="java/jquery-3.6.0.min.js"></script>	
+	<link rel="stylesheet" href="style-p3.css" />
+	<script src="jquery-3.6.0.min.js"></script>	
 </head>
 <body>	
 	<div class="container">
@@ -31,12 +31,7 @@
 			<!--video player start-->
 			<div class="videoPlayer">	
 				<div class="videos">
-					<video class="videox active" id="phaseOneV1" muted autoplay loop><source src="Assets/Phase1/01.webm" type="video/webm" alt=""></video>
-					<video class="videox" id="phaseOneV2" loop><source src="Assets/Phase1/02.webm" type="video/webm" alt=""></video>
-					<video class="videox" id="phaseOneV3" loop><source src="Assets/Phase1/03.webm" type="video/webm" alt=""></video>
-					<video class="videox" id="phaseOneV4" loop><source src="Assets/Phase1/04.webm" type="video/webm" alt=""></video>
-					<video class="videox" id="phaseOneV5" loop><source src="Assets/Phase1/05.webm" type="video/webm" alt=""></video>
-					<video class="videox" id="phaseOneV6" loop><source src="Assets/Phase1/06.webm" type="video/webm" alt=""></video>
+					<video class="videox active" id="phaseOneV1" muted autoplay loop><source src="Assets/Phase3/01.webm" type="video/webm" alt=""></video>
 				</div>				
 			</div>
 			<!--video player end-->
@@ -48,17 +43,17 @@
 			<!--image slider start-->
 			<div class="slider">				
 				<div class="slides" id="slides">						
-					<div class="slide one"><img id="phaseOne1" src="Assets/Phase1/1.png" alt="" ></div>
-					<div class="slide two"><img id="phaseOne2" src="Assets/Phase1/2.png" alt=""></div>				
-					<div class="slide three"><img id="phaseOne3" src="Assets/Phase1/4.png" alt=""></div>
-					<div class="slide four"><img id="phaseOne4" src="Assets/Phase1/5.png" alt=""></div>
-					<div class="slide five"><img id="phaseOne5" src="Assets/Phase1/6.png" alt=""></div>
-					<div class="slide six"><img id="phaseOne6" src="Assets/Phase1/3.png" alt=""></div>			
+					<div class="slide one"><img id="phaseOne1" src="Assets/Phase3/1.png" alt="" ></div>
+					<div class="slide two"><img id="phaseThree2" src="Assets/Phase3/2.png" alt=""></div>				
+					<div class="slide three"><img id="phaseThree3" src="Assets/Phase3/4.png" alt=""></div>
+					<div class="slide four"><img id="phaseThree4" src="Assets/Phase3/5.png" alt=""></div>
+					<div class="slide five"><img id="phaseThree5" src="Assets/Phase3/6.png" alt=""></div>
+					<div class="slide six"><img id="phaseThree6" src="Assets/Phase3/3.png" alt=""></div>			
 				</div>		
 
 				<div class="rangeSlider">
 					<div class="rangeSlider width">
-						<input type="range" id="slider" value="-20" min="-69" max="30" step="-1" />
+						<input type="range" id="slider" value="-50" min="-100" max="0" step="-1" />
 
 						<div id="selector">
 							<div class="selectBtn"></div>
@@ -71,7 +66,7 @@
 			<!--instruction start-->
 			<div class="instruction">
 				<div class="column">
-					<div class="step Active">1</div>
+					<div class="step">1</div>
 					<h3>Arch-Element</h3>
 					<div class="pWrap"><p>Select your elements that meets your design envrionment.</p></div>
 				</div>
@@ -83,7 +78,7 @@
 				</div>
 				<div class="column gap">></div>
 				<div class="column long">
-					<div class="step">3</div>
+					<div class="step Active">3</div>
 					<h3>Tailor Environment</h3>
 					<div class="pWrap"><p>Apply your element choices to customize your design envrionment.</p></div>
 				</div>
@@ -92,15 +87,15 @@
 
 			<!--navigation button start-->
 			<div class="navigationBtn">
-				<a href="#" class="button">BACK</a>
-				<a href="#" class="button main">NEXT</a>
+				<a href="index-p2.html" class="button">BACK</a>
+				<a href="#" class="button main" id="comfirmBtn">CONFIGURE</a>
 			</div>
 			<!--navigation button end-->
 
 		</div>
 		<!--Manual section end-->		
 	</div>
-	<script src="java/script-p1.js"></script>
+	<script src="script.js"></script>
 
 	<svg  class="svgIcons" xmlns="http://www.w3.org/2000/svg">
 		<symbol id="playIcon" viewBox="0 0 8 8" fill="none">
