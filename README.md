@@ -1,2 +1,2 @@
 # yucheuan.github.io
- Fitting Room
+ Fitting Room by Yucheng Huang
