@@ -18,6 +18,11 @@ $(document).on('input change', '#slider', function() {
 });
 
 $('#phaseOne1').click(function() {
+    /*For Info-panel .show*/
+    $('.description.show').removeClass('show');
+    $('#description-1').addClass('show');
+
+
     /*For video .active*/ 
     currentImg = $('.active');
     currentImg.removeClass('active');
@@ -28,6 +33,9 @@ $('#phaseOne1').click(function() {
 });
 
 $('#phaseOne2').click(function() { 
+    $('.description.show').removeClass('show');
+    $('#description-2').addClass('show');
+
     currentImg = $('.active');   
     currentImg.removeClass('active');
     $('#phaseOneV2').addClass('active');
@@ -37,6 +45,9 @@ $('#phaseOne2').click(function() {
 });
 
 $('#phaseOne3').click(function() {
+    $('.description.show').removeClass('show');
+    $('#description-3').addClass('show');
+
     currentImg = $('.active');   
     currentImg.removeClass('active');
     $('#phaseOneV4').addClass('active');
@@ -46,6 +57,9 @@ $('#phaseOne3').click(function() {
 });
 
 $('#phaseOne4').click(function() {
+    $('.description.show').removeClass('show');
+    $('#description-4').addClass('show');
+
     currentImg = $('.active');   
     currentImg.removeClass('active');
     $('#phaseOneV5').addClass('active');
@@ -55,6 +69,9 @@ $('#phaseOne4').click(function() {
 });
 
 $('#phaseOne5').click(function() {
+    $('.description.show').removeClass('show');
+    $('#description-5').addClass('show');
+
     currentImg = $('.active');   
     currentImg.removeClass('active');
     $('#phaseOneV6').addClass('active');
@@ -64,6 +81,9 @@ $('#phaseOne5').click(function() {
 });
 
 $('#phaseOne6').click(function(){
+    $('.description.show').removeClass('show');
+    $('#description-6').addClass('show');
+
     currentImg = $('.active');   
     currentImg.removeClass('active');
     $('#phaseOneV3').addClass('active');
@@ -73,6 +93,9 @@ $('#phaseOne6').click(function(){
 });
 
 $('#phaseOne7').click(function(){
+    $('.description.show').removeClass('show');
+    $('#description-7').addClass('show');
+
     currentImg = $('.active');   
     currentImg.removeClass('active');
     $('#phaseOneV7').addClass('active');
@@ -274,11 +297,189 @@ $('#speedtwo').click(function(){
     }    
 })
 
-$('#comfirmBtn').click(function(){
-        if(document.getElementById('phaseOneV1').playbackRate=1.2){
-                document.getElementById('phaseOneV1').playbackRate=1.0;
-            }
-            else if(document.getElementById('phaseOneV1').playbackRate=1.5){
-                document.getElementById('phaseOneV1').playbackRate=1.0;
-            }
+/*toggle check icons*/
+
+$('#check1').click(function() {
+    var currentIcon = document.getElementById('check1');
+
+    if(currentIcon.src.match('Assets/Fonts/check.png')){
+        currentIcon.src = 'Assets/Fonts/check-toggle.png';
+    }
+    else{
+        currentIcon.src = 'Assets/Fonts/check.png';
+    }
+})
+
+$('#check2').click(function() {
+    var currentIcon = document.getElementById('check2');
+
+    if(currentIcon.src.match('Assets/Fonts/check.png')){
+        currentIcon.src = 'Assets/Fonts/check-toggle.png';
+    }
+    else{
+        currentIcon.src = 'Assets/Fonts/check.png';
+    }
+})
+
+$('#check3').click(function() {
+    var currentIcon = document.getElementById('check3');
+
+    if(currentIcon.src.match('Assets/Fonts/check.png')){
+        currentIcon.src = 'Assets/Fonts/check-toggle.png';
+    }
+    else{
+        currentIcon.src = 'Assets/Fonts/check.png';
+    }
+})
+
+$('#check4').click(function() {
+    var currentIcon = document.getElementById('check4');
+
+    if(currentIcon.src.match('Assets/Fonts/check.png')){
+        currentIcon.src = 'Assets/Fonts/check-toggle.png';
+    }
+    else{
+        currentIcon.src = 'Assets/Fonts/check.png';
+    }
+})
+
+$('#check5').click(function() {
+    var currentIcon = document.getElementById('check5');
+
+    if(currentIcon.src.match('Assets/Fonts/check.png')){
+        currentIcon.src = 'Assets/Fonts/check-toggle.png';
+    }
+    else{
+        currentIcon.src = 'Assets/Fonts/check.png';
+    }
+})
+
+$('#check6').click(function() {
+    var currentIcon = document.getElementById('check6');
+
+    if(currentIcon.src.match('Assets/Fonts/check.png')){
+        currentIcon.src = 'Assets/Fonts/check-toggle.png';
+    }
+    else{
+        currentIcon.src = 'Assets/Fonts/check.png';
+    }
+})
+
+$('#check7').click(function() {
+    var currentIcon = document.getElementById('check7');
+
+    if(currentIcon.src.match('Assets/Fonts/check.png')){
+        currentIcon.src = 'Assets/Fonts/check-toggle.png';
+    }
+    else{
+        currentIcon.src = 'Assets/Fonts/check.png';
+    }
+})
+
+/*toggle one icon only*/
+
+$('#check-1').click(function() {
+    document.getElementById('check-1').src = 'Assets/Fonts/check-toggle.png';
+    document.getElementById('check-2').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-3').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-4').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-5').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-6').src = 'Assets/Fonts/check.png';
+})
+
+$('#check-2').click(function() {
+    document.getElementById('check-1').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-2').src = 'Assets/Fonts/check-toggle.png';
+    document.getElementById('check-3').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-4').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-5').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-6').src = 'Assets/Fonts/check.png';
+})
+
+$('#check-3').click(function() {
+    document.getElementById('check-1').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-2').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-3').src = 'Assets/Fonts/check-toggle.png';
+    document.getElementById('check-4').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-5').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-6').src = 'Assets/Fonts/check.png';
+})
+
+$('#check-4').click(function() {
+    document.getElementById('check-1').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-2').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-3').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-4').src = 'Assets/Fonts/check-toggle.png';
+    document.getElementById('check-5').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-6').src = 'Assets/Fonts/check.png';
+})
+
+$('#check-5').click(function() {
+    document.getElementById('check-1').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-2').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-3').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-4').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-5').src = 'Assets/Fonts/check-toggle.png';
+    document.getElementById('check-6').src = 'Assets/Fonts/check.png';
+})
+
+$('#check-6').click(function() {
+    document.getElementById('check-1').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-2').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-3').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-4').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-5').src = 'Assets/Fonts/check.png';
+    document.getElementById('check-6').src = 'Assets/Fonts/check-toggle.png';
+})
+            
+/*time-Updated Simulation*/
+const p3Video = document.querySelector('.autoVid')
+if(p3Video != null){        
+    p3Video.playbackRate=0.92
+    var animationTrigger = false;
+
+    p3Video.addEventListener('timeupdate', function(event) {
+    var currentTime = p3Video.currentTime;    
+    //console.log(currentTime)
+
+        if (currentTime > 0.9 && currentTime < 3 && animationTrigger != true) {
+        animationTrigger = true;
+        //console.log('in');
+        //console.log(animationTrigger);
+
+        document.getElementById('check1').src = 'Assets/Fonts/check-toggle.png';
+        document.getElementById('check2').src = 'Assets/Fonts/check-toggle.png';
+        }
+
+        if (currentTime > 3.3 && currentTime < 7 && animationTrigger == true) {
+        animationTrigger = false;
+        //console.log('in2');
+        //console.log(animationTrigger);
+
+        document.getElementById('check3').src = 'Assets/Fonts/check-toggle.png';
+        }
+
+        if (currentTime > 7 && currentTime < 10) {
+        animationTrigger = true;
+        }
+
+        if (currentTime > 10 && currentTime < 11 && animationTrigger == true) {
+        animationTrigger = false;
+        //console.log('in3');
+        //console.log(animationTrigger);
+
+        document.getElementById('check3').src = 'Assets/Fonts/check.png';
+        }
+
+        if (currentTime > 14.6 && currentTime < 15 && animationTrigger != true) {
+        animationTrigger = false;
+        //console.log('in4');
+        //console.log(animationTrigger);
+
+        document.getElementById('check1').src = 'Assets/Fonts/check.png';
+        document.getElementById('check2').src = 'Assets/Fonts/check.png';
+        }
     })
+}
+
+

@@ -18,12 +18,12 @@
 			</div>
 			<div class="panelTwo">
 				<div id="planelTwoText">
-					<p>
-						Prototype<br>
+					<p class="description show" id="description-1">
+						Tailored Space<br>
 						<br>
-						- Centre<br>
-						- High Capacity<br>
-						- Seperated<br>
+						• Curtain<br>
+						• Fabric Material<br>
+						• Phygital Wall<br>
 					</p>
 				</div>
 			</div>
@@ -31,7 +31,10 @@
 			<!--video player start-->
 			<div class="videoPlayer">	
 				<div class="videos">
-					<video class="videox active" id="phaseOneV1" muted autoplay loop><source src="Assets/Phase3/01.webm" type="video/webm" alt=""></video>
+					<video class="videox active autoVid" id="phaseOneV1" muted autoplay loop>
+						<source src="Assets/Phase3/01-1.mov" type="video/quicktime" alt="">
+						<source src="Assets/Phase3/01.webm" type="video/webm" alt="">
+					</video>
 				</div>				
 			</div>
 			<!--video player end-->
@@ -43,12 +46,30 @@
 			<!--image slider start-->
 			<div class="slider">				
 				<div class="slides" id="slides">						
-					<div class="slide one"><img id="phaseOne1" src="Assets/Phase3/1.png" alt="" ></div>
-					<div class="slide two"><img id="phaseThree2" src="Assets/Phase3/2.png" alt=""></div>				
-					<div class="slide three"><img id="phaseThree3" src="Assets/Phase3/4.png" alt=""></div>
-					<div class="slide four"><img id="phaseThree4" src="Assets/Phase3/5.png" alt=""></div>
-					<div class="slide five"><img id="phaseThree5" src="Assets/Phase3/6.png" alt=""></div>
-					<div class="slide six"><img id="phaseThree6" src="Assets/Phase3/3.png" alt=""></div>			
+					<div class="slide x">
+						<div class="checkIcon"><img id="check1" src="Assets/Fonts/check.png" alt="" ></div>
+						<img id="phaseOne1" src="Assets/Phase3/1.png" alt="" >
+					</div>
+					<div class="slide x">
+						<div class="checkIcon"><img id="check2" src="Assets/Fonts/check.png" alt="" ></div>
+						<img src="Assets/Phase3/2.png" alt="">
+					</div>				
+					<div class="slide x">
+						<div class="checkIcon"><img id="check3" src="Assets/Fonts/check.png" alt="" ></div>
+						<img src="Assets/Phase3/4.png" alt="">
+					</div>
+					<div class="slide x">
+						<div class="checkIcon"><img src="Assets/Fonts/check.png" alt="" ></div>
+						<img src="Assets/Phase3/5.png" alt="">
+					</div>
+					<div class="slide x">
+						<div class="checkIcon"><img src="Assets/Fonts/check.png" alt="" ></div>
+						<img src="Assets/Phase3/6.png" alt="">
+					</div>
+					<div class="slide x">
+						<div class="checkIcon"><img src="Assets/Fonts/check.png" alt="" ></div>
+						<img src="Assets/Phase3/3.png" alt="">
+					</div>			
 				</div>		
 
 				<div class="rangeSlider">
@@ -68,19 +89,19 @@
 				<div class="column">
 					<div class="step">1</div>
 					<h3>Arch-Element</h3>
-					<div class="pWrap"><p>Select your elements that meets your design envrionment.</p></div>
+					<div class="pWrap"><p>Select one spatial element that meets your design envrionment.</p></div>
 				</div>
 				<div class="column gap">></div>
 				<div class="column">
 					<div class="step">2</div>
 					<h3>Phygital Library</h3>
-					<div class="pWrap"><p>Select your physical and digital material that helps your design progress.</p></div>
+					<div class="pWrap"><p>Select a set of physical and digital materials that helps your design progress.</p></div>
 				</div>
 				<div class="column gap">></div>
 				<div class="column long">
 					<div class="step Active">3</div>
 					<h3>Tailor Environment</h3>
-					<div class="pWrap"><p>Apply your element choices to customize your design envrionment.</p></div>
+					<div class="pWrap"><p>Apply those element choices to customize your design envrionment.</p></div>
 				</div>
 			</div>
 			<!--instruction end-->

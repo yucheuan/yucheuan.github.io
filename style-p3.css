@@ -29,6 +29,7 @@ body{
 	--viewportMarginRight: 2vw;
 	--viewportMarginRight2: 5.3vw;
 	--viewportMarginLeft: 4vw;
+	--checkIconSize: 15.5%;
 	--clr-blue: #1939d4;
 	--clr-white: rgba(255, 255, 255, .7);
 	--clr-shadow: rgba(0, 0, 0, .65);
@@ -193,7 +194,7 @@ p{
 }
 
 #planelTwoText{
-	width: 70%;
+	width: 82%;
 	height: 30%;	
 	margin: 0 auto;
 	margin-top: 20.5%;
@@ -232,55 +233,28 @@ p{
     transform: translate(-50%, 0); 
 }
 
-.slide.one img{
-	left: 50%;
+.slide.x{
+	position: relative;
 }
 
-.slide.two img{
-	left: 50%;
+.checkIcon{
+	/*1:1 aspect ratio*/
+	height: var(--checkIconSize);
+	padding-right: var(--checkIconSize);
+
+	cursor: pointer;
+	z-index: 5;
+	position: absolute;
+	left: 90%;
+	bottom: var(--checkIconSize); 
 }
 
-.slide.three img{
-	left: 50%;
+.checkIcon img{
+	height: 100%;
+	position: absolute;
+	top: 100%;
 }
 
-.slide.four img{
-	left: 50%;
-}
-
-.slide.five img{
-	left: 50%;
-}
-
-.slide.six img{
-	left: 50%;
-}
-
-/*
-.slide.one img{
-	left: 45%;
-}
-
-.slide.two img{
-	left: 27.5%;
-}
-
-.slide.three img{
-	left: 37%;
-}
-
-.slide.four img{
-	left: 54%;
-}
-
-.slide.five img{
-	left: 52%;
-}
-
-.slide.six img{
-	left: 42%;
-}
-*/
 #phaseOne6{
 	width: auto;
 	height: 92%;
