@@ -2,190 +2,28 @@
 <head>
 	<title>Fitting Room</title>
 
-	<link rel="stylesheet" href="style-p1.css" />
+	<link rel="stylesheet" href="style.css" />
 	<script src="jquery-3.6.0.min.js"></script>	
 </head>
 <body>	
 	<div class="container">
-		<!--Simulation section start-->
-		<div class="simulationSection">
-			<div class="panelOne">
-				<div id="planelOneText">
-						<svg class="playIcon" id="play"><use href="#playIcon"></use></svg>
-						<svg class="playIcon" id="speedone"><use href="#playIcon SpeedOne"></use></svg>
-						<svg class="playIcon" id="speedtwo"><use href="#playIcon SpeedTwo"></use></svg>
-				</div>
-			</div>
-			<div class="panelTwo">
-				<div id="planelTwoText">
-					<p class="description show" id="description-1">
-						Spatial Prototype<br>
-						<br>
-						• Decentre<br>
-						• Cornerless<br>
-						• Stacked<br>
-					</p>
-					<p class="description" id="description-2">
-						Spatial Prototype<br>
-						<br>
-						• Centre<br>
-						• High Capacity<br>
-						• Seperated<br>
-					</p>
-					<p class="description" id="description-3">
-						Spatial Prototype<br>
-						<br>
-						• Intersecting<br>
-						• Sectional<br>
-						• Distinct<br>
-					</p>
-					<p class="description" id="description-4">
-						Spatial Prototype<br>
-						<br>
-						• Tiered<br>
-						• Open<br>
-						• Continuty<br>
-					</p>
-					<p class="description" id="description-5">
-						Spatial Prototype<br>
-						<br>
-						• Grid<br>
-						• Individual<br>
-						• Stacked<br>
-					</p>
-					<p class="description" id="description-6">
-						Spatial Prototype<br>
-						<br>
-						• Linear<br>
-						• Direct<br>
-						• Split<br>
-					</p>
-				</div>
-			</div>
+		<div class="videos">
+			<video class="videox active" id="phaseOneV1" muted autoplay>
+				<source src="Assets/Phase1/CoverVideo.mp4" type="video/mp4" alt="">
+			</video>					
+		</div>	
 
-			<!--video player start-->
-			<div class="videoPlayer">	
-				<div class="videos">
-					<video class="videox active" id="phaseOneV1" muted autoplay loop>
-						<source src="Assets/Phase1/01-1.mov" type="video/quicktime" alt="">
-						<source src="Assets/Phase1/01.webm" type="video/webm" alt="">
-					</video>
-					<video class="videox" id="phaseOneV2" loop>
-						<source src="Assets/Phase1/02-1.mov" type="video/quicktime" alt="">
-						<source src="Assets/Phase1/02.webm" type="video/webm" alt="">
-					</video>
-					<video class="videox" id="phaseOneV3" loop>
-						<source src="Assets/Phase1/03-1.mov" type="video/quicktime" alt="">
-						<source src="Assets/Phase1/03.webm" type="video/webm" alt="">
-					</video>
-					<video class="videox" id="phaseOneV4" loop>
-						<source src="Assets/Phase1/04-1.mov" type="video/quicktime" alt="">
-						<source src="Assets/Phase1/04.webm" type="video/webm" alt="">
-					</video>
-					<video class="videox" id="phaseOneV5" loop>
-						<source src="Assets/Phase1/05-1.mov" type="video/quicktime" alt="">
-						<source src="Assets/Phase1/05.webm" type="video/webm" alt="">
-					</video>
-					<video class="videox" id="phaseOneV6" loop>
-						<source src="Assets/Phase1/06-1.mov" type="video/quicktime" alt="">
-						<source src="Assets/Phase1/06.webm" type="video/webm" alt="">
-					</video>
-				</div>				
-			</div>
-			<!--video player end-->
+		<div class="navigationBtn">
+			<a href="index-p1.html" class="button main">START</a>
 		</div>
-		<!--Simulation section end-->
 
-		<!--Munal section start-->
-		<div class="manualSection">
-			<!--image slider start-->
-			<div class="slider">				
-				<div class="slides" id="slides">						
-					<div class="slide x">
-						<div class="checkIcon"><img id="check-1" src="Assets/Fonts/check.png" alt="" ></div>
-						<img id="phaseOne1" src="Assets/Phase1/1.png" alt="" >
-					</div>
-					<div class="slide x">
-						<div class="checkIcon"><img id="check-2" src="Assets/Fonts/check.png" alt="" ></div>
-						<img id="phaseOne2" src="Assets/Phase1/2.png" alt="">
-					</div>				
-					<div class="slide x">
-						<div class="checkIcon"><img id="check-3" src="Assets/Fonts/check.png" alt="" ></div>
-						<img id="phaseOne3" src="Assets/Phase1/4.png" alt="">
-					</div>
-					<div class="slide x">
-						<div class="checkIcon"><img id="check-4" src="Assets/Fonts/check.png" alt="" ></div>
-						<img id="phaseOne4" src="Assets/Phase1/5.png" alt="">
-					</div>
-					<div class="slide x">
-						<div class="checkIcon"><img id="check-5" src="Assets/Fonts/check.png" alt="" ></div>
-						<img id="phaseOne5" src="Assets/Phase1/6.png" alt="">
-					</div>
-					<div class="slide x">
-						<div class="checkIcon"><img id="check-6" src="Assets/Fonts/check.png" alt="" ></div>
-						<img id="phaseOne6" src="Assets/Phase1/3.png" alt="">
-					</div>			
-				</div>		
-
-				<div class="rangeSlider">
-					<div class="rangeSlider width">
-						<input type="range" id="slider" value="-50" min="-100" max="0" step="-1" />
-
-						<div id="selector">
-							<div class="selectBtn"></div>
-						</div>
-					</div>
-				</div>		
-			</div>	
-			<!--image slider end-->
-
-			<!--instruction start-->
-			<div class="instruction">
-				<div class="column">
-					<div class="step Active">1</div>
-					<h3>Arch-Element</h3>
-					<div class="pWrap"><p>Select one spatial element that meets your design envrionment.</p></div>
-				</div>
-				<div class="column gap">></div>
-				<div class="column">
-					<div class="step">2</div>
-					<h3>Phygital Library</h3>
-					<div class="pWrap"><p>Select a set of physical and digital materials that helps your design progress.</p></div>
-				</div>
-				<div class="column gap">></div>
-				<div class="column long">
-					<div class="step">3</div>
-					<h3>Tailor Environment</h3>
-					<div class="pWrap"><p>Apply those element choices to customize your design envrionment.</p></div>
-				</div>
-			</div>
-			<!--instruction end-->
-
-			<!--navigation button start-->
-			<div class="navigationBtn">
-				<a href="index.html" class="button">RESET</a>
-				<a href="index-p2.html" class="button main">NEXT</a>
-			</div>
-			<!--navigation button end-->
-
+		<div class="text">
+			<p>
+				© Yucheng Huang 2022 All Rights Reserved<br>
+			</p>
 		</div>
-		<!--Manual section end-->		
 	</div>
+		
 	<script src="script.js"></script>
-
-	<svg  class="svgIcons" xmlns="http://www.w3.org/2000/svg">
-		<symbol id="playIcon" viewBox="0 0 8 8" fill="none">
-			<path d="M3.99999 7.33335C5.84094 7.33335 7.33332 5.84097 7.33332 4.00002C7.33332 2.15907 5.84094 0.666687 3.99999 0.666687C2.15904 0.666687 0.666656 2.15907 0.666656 4.00002C0.666656 5.84097 2.15904 7.33335 3.99999 7.33335Z" stroke="#1939D4" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-			<path d="M3.33334 2.66669L5.33334 4.00002L3.33334 5.33335V2.66669Z" stroke="#1939D4" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-		</symbol>
-		<symbol id="playIcon SpeedOne" viewBox="0 0 8 8" fill="none">
-			<path d="M2.38796 3.63636L2.68892 4.16726L2.99254 3.63636H3.28285L2.8576 4.31818L3.2864 5H2.99609L2.68892 4.49041L2.38263 5H2.09144L2.5158 4.31818L2.09677 3.63636H2.38796ZM4.24165 3.18182V5H3.96644V3.45703H3.95579L3.52077 3.74112V3.47834L3.97443 3.18182H4.24165ZM4.80695 5.01687C4.75842 5.01687 4.71669 4.9997 4.68177 4.96538C4.64685 4.93046 4.62939 4.88844 4.62939 4.83931C4.62939 4.79078 4.64685 4.74935 4.68177 4.71502C4.71669 4.6801 4.75842 4.66264 4.80695 4.66264C4.85548 4.66264 4.89721 4.6801 4.93213 4.71502C4.96705 4.74935 4.98451 4.79078 4.98451 4.83931C4.98451 4.87186 4.97622 4.90175 4.95965 4.92898C4.94367 4.95561 4.92236 4.97692 4.89573 4.9929C4.8691 5.00888 4.8395 5.01687 4.80695 5.01687ZM5.33651 5V4.80114L5.95175 4.16371C6.01744 4.09446 6.0716 4.03379 6.11421 3.98171C6.15742 3.92904 6.18968 3.87902 6.21098 3.83168C6.23229 3.78433 6.24294 3.73402 6.24294 3.68075C6.24294 3.62038 6.22874 3.5683 6.20033 3.5245C6.17192 3.48011 6.13315 3.44608 6.08403 3.42241C6.0349 3.39814 5.97957 3.38601 5.91801 3.38601C5.85291 3.38601 5.79609 3.39933 5.74756 3.42596C5.69903 3.45259 5.66174 3.49018 5.6357 3.53871C5.60966 3.58724 5.59664 3.64406 5.59664 3.70916H5.33474C5.33474 3.59848 5.36019 3.50172 5.41109 3.41886C5.46199 3.336 5.53183 3.27178 5.62061 3.22621C5.70938 3.18004 5.8103 3.15696 5.92334 3.15696C6.03757 3.15696 6.13818 3.17975 6.22519 3.22532C6.31278 3.2703 6.38114 3.33185 6.43026 3.40998C6.47939 3.48751 6.50395 3.57511 6.50395 3.67276C6.50395 3.74023 6.49123 3.80623 6.46578 3.87074C6.44092 3.93525 6.39742 4.00716 6.33527 4.08647C6.27313 4.16519 6.18672 4.26077 6.07604 4.37322L5.71471 4.75142V4.76474H6.53325V5H5.33651Z" fill="#1939D4"/>
-			<path d="M4.00002 7.33335C5.84097 7.33335 7.33335 5.84097 7.33335 4.00002C7.33335 2.15907 5.84097 0.666687 4.00002 0.666687C2.15907 0.666687 0.666687 2.15907 0.666687 4.00002C0.666687 5.84097 2.15907 7.33335 4.00002 7.33335Z" stroke="#1939D4" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-		</symbol>
-		<symbol id="playIcon SpeedTwo" viewBox="0 0 8 8" fill="none">
-			<path d="M2.38796 3.63636L2.68892 4.16726L2.99254 3.63636H3.28285L2.8576 4.31818L3.2864 5H2.99609L2.68892 4.49041L2.38263 5H2.09144L2.5158 4.31818L2.09677 3.63636H2.38796ZM4.24165 3.18182V5H3.96644V3.45703H3.95579L3.52077 3.74112V3.47834L3.97443 3.18182H4.24165ZM4.80695 5.01687C4.75842 5.01687 4.71669 4.9997 4.68177 4.96538C4.64685 4.93046 4.62939 4.88844 4.62939 4.83931C4.62939 4.79078 4.64685 4.74935 4.68177 4.71502C4.71669 4.6801 4.75842 4.66264 4.80695 4.66264C4.85548 4.66264 4.89721 4.6801 4.93213 4.71502C4.96705 4.74935 4.98451 4.79078 4.98451 4.83931C4.98451 4.87186 4.97622 4.90175 4.95965 4.92898C4.94367 4.95561 4.92236 4.97692 4.89573 4.9929C4.8691 5.00888 4.8395 5.01687 4.80695 5.01687ZM5.90736 5.02486C5.79609 5.02486 5.69607 5.00355 5.60729 4.96094C5.5191 4.91773 5.44867 4.85855 5.396 4.78338C5.34332 4.70821 5.31521 4.6224 5.31166 4.52592H5.57799C5.5845 4.60405 5.61913 4.66826 5.68186 4.71857C5.7446 4.76888 5.81977 4.79403 5.90736 4.79403C5.9772 4.79403 6.03905 4.77805 6.09291 4.74609C6.14736 4.71354 6.18997 4.66886 6.22075 4.61204C6.25212 4.55522 6.2678 4.49041 6.2678 4.41761C6.2678 4.34363 6.25182 4.27764 6.21986 4.21964C6.1879 4.16164 6.14381 4.11606 6.08758 4.08292C6.03195 4.04978 5.96802 4.03291 5.89582 4.03232C5.84078 4.03232 5.78544 4.04179 5.7298 4.06072C5.67417 4.07966 5.62919 4.10452 5.59486 4.1353L5.34362 4.09801L5.44571 3.18182H6.44536V3.41708H5.67387L5.61617 3.92578H5.62682C5.66233 3.89145 5.70938 3.86275 5.76798 3.83967C5.82716 3.81658 5.89049 3.80504 5.95796 3.80504C6.06864 3.80504 6.16718 3.83138 6.2536 3.88406C6.3406 3.93673 6.40896 4.00864 6.45867 4.09979C6.50898 4.19034 6.53384 4.29451 6.53325 4.41229C6.53384 4.53007 6.50721 4.63512 6.45335 4.72745C6.40008 4.81978 6.3261 4.89258 6.2314 4.94585C6.1373 4.99852 6.02928 5.02486 5.90736 5.02486Z" fill="#1939D4"/>
-			<path d="M4.00002 7.33335C5.84097 7.33335 7.33335 5.84097 7.33335 4.00002C7.33335 2.15907 5.84097 0.666687 4.00002 0.666687C2.15907 0.666687 0.666687 2.15907 0.666687 4.00002C0.666687 5.84097 2.15907 7.33335 4.00002 7.33335Z" stroke="#1939D4" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-		</symbol>
-	</svg>
 </body>
 </html>

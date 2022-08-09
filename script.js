@@ -1,21 +1,31 @@
 var currentImg = $('.active');
 var x = 1;
 
+if(document.querySelector('#phaseThreeV1') != null)
+{
+    console.log("ok");
+    document.getElementById('phaseThreeV1').playbackRate=1.2;
+}
+
 /*range slider button*/
 var slider = document.getElementById('slider');
 var slector = document.getElementById('selector');
 
-slider.oninput = function(){
-    selector.style.left = this.value + "%";
+
+if(slider != null ){
+    slider.oninput = function(){
+        selector.style.left = this.value + "%";
+    }
+
+    /*range input control slider*/
+    $(document).on('input change', '#slider', function() {
+     $('#slider_value').html( $(this).val() );
+      $('.slides').css({
+         'margin-left': $(this).val()+'%'
+      });
+    });
 }
 
-/*range input control slider*/
-$(document).on('input change', '#slider', function() {
-    $('#slider_value').html( $(this).val() );
-    $('.slides').css({
-        'margin-left': $(this).val()+'%'
-    });
-});
 
 $('#phaseOne1').click(function() {
     /*For Info-panel .show*/
@@ -26,10 +36,17 @@ $('#phaseOne1').click(function() {
     /*For video .active*/ 
     currentImg = $('.active');
     currentImg.removeClass('active');
-    $('#phaseOneV1').addClass('active');
+    $('#phaseOneV1').addClass('active');    
 
-    document.getElementById('phaseOneV1').play();
+    document.getElementById('phaseOneV1').play();   
+    document.getElementById('phaseOneV1').playbackRate=1.0 
     x = 1;
+
+    /*toggle icon*/
+    vid = 'phaseOneV1';
+    defaultActiveStatus1();
+    defaultActiveStatus2();
+    defaultActiveStatus3();
 });
 
 $('#phaseOne2').click(function() { 
@@ -41,7 +58,13 @@ $('#phaseOne2').click(function() {
     $('#phaseOneV2').addClass('active');
 
     document.getElementById('phaseOneV2').play();
+    document.getElementById('phaseOneV2').playbackRate=1.0
     x = 2;
+
+    vid = 'phaseOneV2';
+    defaultActiveStatus1();
+    defaultActiveStatus2();
+    defaultActiveStatus3();
 });
 
 $('#phaseOne3').click(function() {
@@ -53,7 +76,13 @@ $('#phaseOne3').click(function() {
     $('#phaseOneV4').addClass('active');
 
     document.getElementById('phaseOneV4').play();
+    document.getElementById('phaseOneV4').playbackRate=1.0
     x = 4;
+
+    vid = 'phaseOneV4';
+    defaultActiveStatus1();
+    defaultActiveStatus2();
+    defaultActiveStatus3();
 });
 
 $('#phaseOne4').click(function() {
@@ -65,7 +94,13 @@ $('#phaseOne4').click(function() {
     $('#phaseOneV5').addClass('active');
 
     document.getElementById('phaseOneV5').play();
+    document.getElementById('phaseOneV5').playbackRate=1.0
     x = 5;
+
+    vid = 'phaseOneV5';
+    defaultActiveStatus1();
+    defaultActiveStatus2();
+    defaultActiveStatus3();
 });
 
 $('#phaseOne5').click(function() {
@@ -77,7 +112,13 @@ $('#phaseOne5').click(function() {
     $('#phaseOneV6').addClass('active');
 
     document.getElementById('phaseOneV6').play();
+    document.getElementById('phaseOneV6').playbackRate=1.0
     x = 6;
+
+    vid = 'phaseOneV6';
+    defaultActiveStatus1();
+    defaultActiveStatus2();
+    defaultActiveStatus3();
 });
 
 $('#phaseOne6').click(function(){
@@ -89,7 +130,13 @@ $('#phaseOne6').click(function(){
     $('#phaseOneV3').addClass('active');
 
     document.getElementById('phaseOneV3').play();
+    document.getElementById('phaseOneV3').playbackRate=1.0
     x = 3;
+
+    vid = 'phaseOneV3';
+    defaultActiveStatus1();
+    defaultActiveStatus2();
+    defaultActiveStatus3();
 });
 
 $('#phaseOne7').click(function(){
@@ -101,197 +148,401 @@ $('#phaseOne7').click(function(){
     $('#phaseOneV7').addClass('active');
 
     document.getElementById('phaseOneV7').play();
+    document.getElementById('phaseOneV7').playbackRate=1.0
     x = 7;
+
+    vid = 'phaseOneV7';
+    defaultActiveStatus1();
+    defaultActiveStatus2();
+    defaultActiveStatus3();
 });
 
+/*control menu status*/
+
+const playIcon = document.getElementById('play');
+const speedoneIcon = document.getElementById('speedone');
+const speedtwoIcon = document.getElementById('speedtwo');
+var vid = 'ok';
+
+var defaultActiveStatus1 = function() {
+    if(document.getElementById(vid).paused){
+        //console.log("Yes");
+        $('#c1').addClass('cActive');
+        $('#t1').addClass('t1Active');
+    }
+    else{
+        //console.log("No");        
+        $('#c1').removeClass('cActive');
+        $('#t1').removeClass('t1Active');
+    }
+}
+
+var defaultActiveStatus2 = function() {
+    if(document.getElementById(vid).playbackRate!=1.2){
+        $('#c2').removeClass('cActive');
+        $('#t2').removeClass('tActive');
+    }
+    else{   
+        $('#c2').addClass('cActive');
+        $('#t2').addClass('tActive');
+    }
+}
+
+var defaultActiveStatus3 = function() {
+    if(document.getElementById(vid).playbackRate!=1.5){
+        $('#c3').removeClass('cActive');
+        $('#t3').removeClass('tActive');
+    }
+    else{   
+        $('#c3').addClass('cActive');
+        $('#t3').addClass('tActive');
+    }
+}
+
 /*play & pause*/
+
 $('#play').click(function(){
-    console.log(x);
+    //console.log(x);
 
     switch(x){
         case 1:
             if(document.getElementById('phaseOneV1').paused){
                 document.getElementById('phaseOneV1').play();
+                
+                vid = 'phaseOneV1';
+                defaultActiveStatus1();              
             }
             else if(document.getElementById('phaseOneV1').played){
                 document.getElementById('phaseOneV1').pause();
-;
+
+                vid = 'phaseOneV1';
+                defaultActiveStatus1();
             }
             break;
         case 2:
             if(document.getElementById('phaseOneV2').paused){
                 document.getElementById('phaseOneV2').play();
+
+                vid = 'phaseOneV2';
+                defaultActiveStatus1();
             }
             else if(document.getElementById('phaseOneV2').played){
                 document.getElementById('phaseOneV2').pause();
+
+                vid = 'phaseOneV2';
+                defaultActiveStatus1();
             }
             break;
         case 3:
             if(document.getElementById('phaseOneV3').paused){
                 document.getElementById('phaseOneV3').play();
+
+                vid = 'phaseOneV3';
+                defaultActiveStatus1();
             }
             else if(document.getElementById('phaseOneV3').played){
                 document.getElementById('phaseOneV3').pause();
+
+                vid = 'phaseOneV3';
+                defaultActiveStatus1();
             }
             break;
         case 4:
             if(document.getElementById('phaseOneV4').paused){
-                document.getElementById('phaseOneV4').play();
+                document.getElementById('phaseOneV4').play()
+
+                vid = 'phaseOneV4';;
+                defaultActiveStatus1();
             }
             else if(document.getElementById('phaseOneV4').played){
                 document.getElementById('phaseOneV4').pause();
+
+                vid = 'phaseOneV4';
+                defaultActiveStatus1();
             }
             break;
         case 5:
             if(document.getElementById('phaseOneV5').paused){
                 document.getElementById('phaseOneV5').play();
+
+                vid = 'phaseOneV5';
+                defaultActiveStatus1();
             }
             else if(document.getElementById('phaseOneV5').played){
                 document.getElementById('phaseOneV5').pause();
+
+                vid = 'phaseOneV6';
+                defaultActiveStatus1();
             }
             break;
         case 6:
             if(document.getElementById('phaseOneV6').paused){
                 document.getElementById('phaseOneV6').play();
+
+                vid = 'phaseOneV7';
+                defaultActiveStatus1();
             }
             else if(document.getElementById('phaseOneV6').played){
                 document.getElementById('phaseOneV6').pause();
+
+                vid = 'phaseOneV7';
+                defaultActiveStatus1();
             }
             break;
         case 7:
             if(document.getElementById('phaseOneV7').paused){
                 document.getElementById('phaseOneV7').play();
+
+                vid = 'phaseOneV7';
+                defaultActiveStatus1();
             }
             else if(document.getElementById('phaseOneV7').played){
                 document.getElementById('phaseOneV7').pause();
+
+                vid = 'phaseOneV7';
+                defaultActiveStatus1();
             }
             break;
     }    
 })
 
-/* speed x1.2*/
+/*speed x1.2*/
+
 $('#speedone').click(function(){
-    console.log(x);
+    //console.log(x);
 
     switch(x){
         case 1:
-            if(document.getElementById('phaseOneV1').playbackRate=1.0){
+            if(document.getElementById('phaseOneV1').playbackRate!=1.2){
                 document.getElementById('phaseOneV1').playbackRate=1.2;
-            }
-            else if(document.getElementById('phaseOneV1').playbackRate=1.5){
-                document.getElementById('phaseOneV1').playbackRate=1.2;
-            }
-            break;
-        case 2:
-            if(document.getElementById('phaseOneV2').playbackRate=1.0){
-                document.getElementById('phaseOneV2').playbackRate=1.2;
-            }
-            else if(document.getElementById('phaseOneV2').playbackRate=1.5){
-                document.getElementById('phaseOneV2').playbackRate=1.2;
-            }
-            break;
-        case 3:
-            if(document.getElementById('phaseOneV3').playbackRate=1.0){
-                document.getElementById('phaseOneV3').playbackRate=1.2;
-            }
-            else if(document.getElementById('phaseOneV3').playbackRate=1.5){
-                document.getElementById('phaseOneV3').playbackRate=1.2;
-            }
-            break;
-        case 4:
-            if(document.getElementById('phaseOneV4').playbackRate=1.0){
-                document.getElementById('phaseOneV4').playbackRate=1.2;
-            }
-            else if(document.getElementById('phaseOneV4').playbackRate=1.5){
-                document.getElementById('phaseOneV4').playbackRate=1.2;
-            }
-            break;
-        case 5:
-            if(document.getElementById('phaseOneV5').playbackRate=1.0){
-                document.getElementById('phaseOneV5').playbackRate=1.2;
-            }
-            else if(document.getElementById('phaseOneV5').playbackRate=1.5){
-                document.getElementById('phaseOneV5').playbackRate=1.2;
-            }
-            break;
-        case 6:
-            if(document.getElementById('phaseOneV6').playbackRate=1.0){
-                document.getElementById('phaseOneV6').playbackRate=1.2;
-            }
-            else if(document.getElementById('phaseOneV6').playbackRate=1.5){
-                document.getElementById('phaseOneV6').playbackRate=1.2;
-            }
-            break;
-        case 7:
-            if(document.getElementById('phaseOneV7').playbackRate=1.0){
-                document.getElementById('phaseOneV7').playbackRate=1.2;
-            }
-            else if(document.getElementById('phaseOneV7').playbackRate=1.5){
-                document.getElementById('phaseOneV7').playbackRate=1.2;
-            }
-            break;
-    }    
-})
 
-/* speed x1.5*/
-$('#speedtwo').click(function(){
-    console.log(x);
-
-    switch(x){
-        case 1:
-            if(document.getElementById('phaseOneV1').playbackRate=1.0){
-                document.getElementById('phaseOneV1').playbackRate=1.5;
+                vid = 'phaseOneV1';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             else if(document.getElementById('phaseOneV1').playbackRate=1.2){
-                document.getElementById('phaseOneV1').playbackRate=1.5;
+                document.getElementById('phaseOneV1').playbackRate=1.0;
+
+                vid = 'phaseOneV1';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             break;
         case 2:
-            if(document.getElementById('phaseOneV2').playbackRate=1.0){
-                document.getElementById('phaseOneV2').playbackRate=1.5;
+            if(document.getElementById('phaseOneV2').playbackRate!=1.2){
+                document.getElementById('phaseOneV2').playbackRate=1.2;
+
+                vid = 'phaseOneV2';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             else if(document.getElementById('phaseOneV2').playbackRate=1.2){
-                document.getElementById('phaseOneV2').playbackRate=1.5;
+                document.getElementById('phaseOneV2').playbackRate=1.0;
+
+                vid = 'phaseOneV2';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             break;
         case 3:
-            if(document.getElementById('phaseOneV3').playbackRate=1.0){
-                document.getElementById('phaseOneV3').playbackRate=1.5;
+            if(document.getElementById('phaseOneV3').playbackRate!=1.2){
+                document.getElementById('phaseOneV3').playbackRate=1.2;
+
+                vid = 'phaseOneV3';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             else if(document.getElementById('phaseOneV3').playbackRate=1.2){
-                document.getElementById('phaseOneV3').playbackRate=1.5;
+                document.getElementById('phaseOneV3').playbackRate=1.0;
+
+                vid = 'phaseOneV3';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             break;
         case 4:
-            if(document.getElementById('phaseOneV4').playbackRate=1.0){
-                document.getElementById('phaseOneV4').playbackRate=1.5;
+            if(document.getElementById('phaseOneV4').playbackRate!=1.2){
+                document.getElementById('phaseOneV4').playbackRate=1.2;
+
+                vid = 'phaseOneV4';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             else if(document.getElementById('phaseOneV4').playbackRate=1.2){
-                document.getElementById('phaseOneV4').playbackRate=1.5;
+                document.getElementById('phaseOneV4').playbackRate=1.0;
+
+                vid = 'phaseOneV4';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             break;
         case 5:
-            if(document.getElementById('phaseOneV5').playbackRate=1.0){
-                document.getElementById('phaseOneV5').playbackRate=1.5;
+            if(document.getElementById('phaseOneV5').playbackRate!=1.2){
+                document.getElementById('phaseOneV5').playbackRate=1.2;
+
+                vid = 'phaseOneV5';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             else if(document.getElementById('phaseOneV5').playbackRate=1.2){
-                document.getElementById('phaseOneV5').playbackRate=1.5;
+                document.getElementById('phaseOneV5').playbackRate=1.0;
+
+                vid = 'phaseOneV5';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             break;
         case 6:
-            if(document.getElementById('phaseOneV6').playbackRate=1.0){
-                document.getElementById('phaseOneV6').playbackRate=1.5;
+            if(document.getElementById('phaseOneV6').playbackRate!=1.2){
+                document.getElementById('phaseOneV6').playbackRate=1.2;
+
+                vid = 'phaseOneV6';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             else if(document.getElementById('phaseOneV6').playbackRate=1.2){
-                document.getElementById('phaseOneV6').playbackRate=1.5;
+                document.getElementById('phaseOneV6').playbackRate=1.0;
+
+                vid = 'phaseOneV6';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             break;
         case 7:
-            if(document.getElementById('phaseOneV7').playbackRate=1.0){
-                document.getElementById('phaseOneV7').playbackRate=1.5;
+            if(document.getElementById('phaseOneV7').playbackRate!=1.2){
+                document.getElementById('phaseOneV7').playbackRate=1.2;
+
+                vid = 'phaseOneV7';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             else if(document.getElementById('phaseOneV7').playbackRate=1.2){
+                document.getElementById('phaseOneV7').playbackRate=1.0;
+
+                vid = 'phaseOneV7';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            break;
+    }    
+})
+
+/*speed x1.5*/
+
+$('#speedtwo').click(function(){
+    //console.log(x);
+
+    switch(x){
+        case 1:
+            if(document.getElementById('phaseOneV1').playbackRate!=1.5){
+                document.getElementById('phaseOneV1').playbackRate=1.5;
+
+                vid = 'phaseOneV1';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            else if(document.getElementById('phaseOneV1').playbackRate=1.5){
+                document.getElementById('phaseOneV1').playbackRate=1.0;
+
+                vid = 'phaseOneV1';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            break;
+        case 2:
+            if(document.getElementById('phaseOneV2').playbackRate!=1.5){
+                document.getElementById('phaseOneV2').playbackRate=1.5;
+
+                vid = 'phaseOneV2';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            else if(document.getElementById('phaseOneV2').playbackRate=1.5){
+                document.getElementById('phaseOneV2').playbackRate=1.0;
+
+                vid = 'phaseOneV2';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            break;
+        case 3:
+            if(document.getElementById('phaseOneV3').playbackRate!=1.5){
+                document.getElementById('phaseOneV3').playbackRate=1.5;
+
+                vid = 'phaseOneV3';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            else if(document.getElementById('phaseOneV3').playbackRate=1.5){
+                document.getElementById('phaseOneV3').playbackRate=1.0;
+
+                vid = 'phaseOneV3';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            break;
+        case 4:
+            if(document.getElementById('phaseOneV4').playbackRate!=1.5){
+                document.getElementById('phaseOneV4').playbackRate=1.5;
+
+                vid = 'phaseOneV4';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            else if(document.getElementById('phaseOneV4').playbackRate=1.5){
+                document.getElementById('phaseOneV4').playbackRate=1.0;
+
+                vid = 'phaseOneV4';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            break;
+        case 5:
+            if(document.getElementById('phaseOneV5').playbackRate!=1.5){
+                document.getElementById('phaseOneV5').playbackRate=1.5;
+
+                vid = 'phaseOneV5';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            else if(document.getElementById('phaseOneV5').playbackRate=1.5){
+                document.getElementById('phaseOneV5').playbackRate=1.0;
+
+                vid = 'phaseOneV5';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            break;
+        case 6:
+            if(document.getElementById('phaseOneV6').playbackRate!=1.5){
+                document.getElementById('phaseOneV6').playbackRate=1.5;
+
+                vid = 'phaseOneV6';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            else if(document.getElementById('phaseOneV6').playbackRate=1.5){
+                document.getElementById('phaseOneV6').playbackRate=1.0;
+
+                vid = 'phaseOneV6';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            break;
+        case 7:
+            if(document.getElementById('phaseOneV7').playbackRate!=1.5){
                 document.getElementById('phaseOneV7').playbackRate=1.5;
+
+                vid = 'phaseOneV7';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
+            }
+            else if(document.getElementById('phaseOneV7').playbackRate=1.5){
+                document.getElementById('phaseOneV7').playbackRate=1.0;
+
+                vid = 'phaseOneV7';
+                defaultActiveStatus2();
+                defaultActiveStatus3();
             }
             break;
     }    
@@ -432,7 +683,8 @@ $('#check-6').click(function() {
     document.getElementById('check-6').src = 'Assets/Fonts/check-toggle.png';
 })
             
-/*time-Updated Simulation*/
+/*time-Updated Simulation page-3*/
+
 const p3Video = document.querySelector('.autoVid')
 if(p3Video != null){        
     p3Video.playbackRate=0.92
@@ -482,4 +734,56 @@ if(p3Video != null){
     })
 }
 
+/*time-Updated Simulation page-4*/
 
+const p4Video = document.querySelector('.autoVid2')
+if(p4Video != null){        
+    p4Video.playbackRate=0.92
+
+    p4Video.addEventListener('timeupdate', function(event) {
+    var currentTime = p4Video.currentTime;    
+    console.log(currentTime)
+
+        if (currentTime > 6.08 && currentTime < 7) {
+        console.log('in');
+        //console.log(animationTrigger);
+
+        document.getElementById('check1').src = 'Assets/Fonts/check-toggle.png';
+        }
+
+        if (currentTime > 11.1 && currentTime < 12) {
+        console.log('in2');
+        //console.log(animationTrigger);
+
+        document.getElementById('check2').src = 'Assets/Fonts/check-toggle.png';
+        }
+
+        if (currentTime > 15.2 && currentTime < 16) {
+        console.log('in3');
+        //console.log(animationTrigger);
+
+        document.getElementById('check3').src = 'Assets/Fonts/check-toggle.png';
+        }
+
+        if (currentTime > 23.3 && currentTime < 24) {
+        console.log('in4');
+        //console.log(animationTrigger);
+
+        document.getElementById('check4').src = 'Assets/Fonts/check-toggle.png';
+        }
+
+        if (currentTime > 27.7 && currentTime < 29) {
+        console.log('in5');
+        //console.log(animationTrigger);
+
+        document.getElementById('check5').src = 'Assets/Fonts/check-toggle.png';
+        }
+
+        if (currentTime > 32.1 && currentTime < 33) {
+        console.log('in6');
+        //console.log(animationTrigger);
+
+        document.getElementById('check6').src = 'Assets/Fonts/check-toggle.png';
+        }
+    })
+}

@@ -34,7 +34,7 @@ body{
 	--clr-white: rgba(255, 255, 255, .7);
 	--clr-shadow: rgba(0, 0, 0, .65);
 	--clr-bg: #E9E6D9;
-	background-image: url(Assets/BG0.png);
+	background-image: url(Assets/BG0.jpg);
 }
 
 h3{
@@ -208,6 +208,35 @@ p{
 	transform: translate(7%, 0)
 }
 
+/*play icon status*/
+
+.c{
+	stroke: var(--clr-blue);
+	stroke-width: 0.3;
+}
+
+.cActive{
+	fill: var(--clr-blue);
+}
+
+.t{
+	fill: var(--clr-blue);
+}
+
+.tActive{
+	fill: white;
+}
+
+.t1{
+	stroke: var(--clr-blue);
+	stroke-width: 0.3;
+}
+
+.t1Active{
+	stroke: white;
+	stroke-width: 0.4;
+}
+
 /*slider*/
 
 .slides{	
@@ -238,6 +267,7 @@ p{
 	position: absolute;
 	left: 50%; 
     transform: translate(-50%, 0); 
+    cursor: pointer;
 }
 
 .slide.x{
