@@ -243,7 +243,7 @@ p{
 	/*slide movement*/
 	margin-left: -5px;	
 	transition: margin-left 1.5s;
-	transform:translateX(0px);
+	transform:translateX(-28px);
 }
 
 .slide{
@@ -260,7 +260,22 @@ p{
 	position: absolute;
 	left: 50%; 
     transform: translate(-50%, 0); 
-    cursor: pointer;
+    cursor: pointer;    
+    transition: height 100ms linear;
+}
+
+.imgHover:hover{
+	height: 21vh;
+}
+
+#phaseOne6{
+	width: auto;
+	height: 92%;
+}
+
+#phaseOne6:hover{
+	width: auto;
+	height: 98%;
 }
 
 .slide.x{
@@ -283,11 +298,6 @@ p{
 	height: 100%;
 	position: absolute;
 	top: 100%;
-}
-
-#phaseOne6{
-	width: auto;
-	height: 92%;
 }
 
 .rangeSlider{	
@@ -392,9 +402,36 @@ p{
 	padding: 0.35em 1.2em;
 	border-radius: 0.5em;
 	margin-bottom: 7vh;
+	position: relative;
 }
 
-.button.main{
-	color: white;
+.button.BGSlide::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 0.5em;
+	z-index: -1;
 	background: var(--clr-blue);
+
+	transition: transform 150ms ease-in-out;
+	transform: scaleX(0);
+	transform-origin: center;
+}
+
+.button.BGSlide:hover::before{
+	transform: scaleX(1.0);
+}
+
+.button.BGSlide{
+	transition: color 150ms ease-in-out;
+	transition: scale 150ms ease-in-out;
+	z-index: 1;
+}
+
+.button.BGSlide:hover{
+	color: white;
+	transform: scale(1.06);
 }

@@ -3,8 +3,8 @@ var x = 1;
 
 if(document.querySelector('#phaseThreeV1') != null)
 {
-    console.log("ok");
-    document.getElementById('phaseThreeV1').playbackRate=1.2;
+    //console.log("ok!");
+    document.getElementById('phaseThreeV1').playbackRate=15.0;
 }
 
 /*range slider button*/
@@ -732,7 +732,7 @@ if(p3Video != null){
         document.getElementById('check2').src = 'Assets/Fonts/check.png';
         }
     })
-}
+}        
 
 /*time-Updated Simulation page-4*/
 
@@ -742,12 +742,20 @@ if(p4Video != null){
 
     p4Video.addEventListener('timeupdate', function(event) {
     var currentTime = p4Video.currentTime;    
-    console.log(currentTime)
+    //console.log(currentTime)
+
+        if (currentTime > 3.5 && currentTime < 4) {
+        //console.log(animationTrigger);
+
+        $('.columns').addClass('cMove');
+        $('.site').addClass('sMove');        
+        $('.navigationBtn').addClass('nMove');
+        document.getElementById('phaseThreeV1').playbackRate=1.5;
+        }
 
         if (currentTime > 6.08 && currentTime < 7) {
         console.log('in');
         //console.log(animationTrigger);
-
         document.getElementById('check1').src = 'Assets/Fonts/check-toggle.png';
         }
 
@@ -781,6 +789,13 @@ if(p4Video != null){
 
         if (currentTime > 32.1 && currentTime < 33) {
         console.log('in6');
+        //console.log(animationTrigger);
+
+        document.getElementById('check6').src = 'Assets/Fonts/check-toggle.png';
+        }
+
+        if (currentTime > 38 && currentTime < 38.1) {
+        console.log('in7');
         //console.log(animationTrigger);
 
         document.getElementById('check6').src = 'Assets/Fonts/check-toggle.png';

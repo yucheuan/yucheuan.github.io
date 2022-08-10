@@ -113,11 +113,69 @@ p{
 	padding: 0.35em 1.2em;
 	border-radius: 0.5em;
 	margin-bottom: 7vh;
+	position: relative;
 }
 
-.button.main{
-	color: white;
+.button.BGSlide::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 0.5em;
+	z-index: -1;
 	background: var(--clr-blue);
+
+	transition: transform 150ms ease-in-out;
+	transform: scaleX(0);
+	transform-origin: center;
+}
+
+.button.BGSlide:hover::before{
+	transform: scaleX(1.0);
+}
+
+.button.BGSlide{
+	transition: color 150ms ease-in-out;
+	transition: scale 150ms ease-in-out;
+	z-index: 1;
+}
+
+.button.BGSlide:hover{
+	color: white;
+	transform: scale(1.06);
+}
+
+.button.main.BGSlide.bMove{
+	animation: 0.25s linear 2s 2 forwards btnAnim,
+	0.25s linear 4s 2 forwards btnAnim,
+	0.25s linear 6s 2 forwards btnAnim,
+	0.25s linear 10s 2 forwards btnAnim,
+	0.25s linear 12s 2 forwards btnAnim,
+	0.25s linear 14s 2 forwards btnAnim,
+	0.25s linear 16s 2 forwards btnAnim,
+	0.25s linear 18s 2 forwards btnAnim,
+	0.25s linear 20s 2 forwards btnAnim,
+	0.25s linear 22s 2 forwards btnAnim;
+}
+
+@keyframes btnAnim{
+	0%{		
+		transform: rotate(0);
+	}
+
+	25%{		
+		transform: rotate(3deg);
+	}
+
+	75%{		
+		transform: rotate(-3deg);
+	}
+
+	100%{		
+		transform: rotate(0);
+	}
 }
 
 .text{

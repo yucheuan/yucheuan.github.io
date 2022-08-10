@@ -92,8 +92,13 @@ p{
 	height: 80%;
 	position: absolute;
 	top: 50%;
-	left: 4.5%;
+	left: -13%;
 	transform: translate(0%,-54.2%);
+	transition: left 2s ease-out;
+}
+
+.cMove{
+	left: 4.5%;
 }
 
 .column{
@@ -113,7 +118,6 @@ p{
 	height: var(--checkIconSize);
 	padding-right: var(--checkIconSize);
 
-	cursor: pointer;
 	z-index: 5;
 	position: absolute;
 	left: 108%;
@@ -137,24 +141,34 @@ p{
 	object-fit: cover;
 	z-index: 5;
 	position: absolute;
-	right: 0%;
+	right: -17%;
 	bottom: 0%;
-    transform: translate(0%,0%);
+    transform: translate(0%,0%);    
+	transition: right 2s ease-out;
+}
+
+.nMove{
+	right: 0%
 }
 
 .site{
 	height: 15vh;
 	margin-right: var(--viewportMarginRight2);
 	position: absolute;
-	right: 0%;
+	right: -24%;
 	top: 2.5%;
     transform: translate(0%,0%);
+	transition: right 2s ease-out;
 }
 
 .site img{
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
+}
+
+.sMove{
+	right: 0%;
 }
 
 /*Button*/
@@ -171,11 +185,69 @@ p{
 	padding: 0.35em 1.2em;
 	border-radius: 0.5em;
 	margin-bottom: 7vh;
+	position: relative;
 }
 
-.button.main{
-	color: white;
+.button.BGSlide::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 0.5em;
+	z-index: -1;
 	background: var(--clr-blue);
+
+	transition: transform 150ms ease-in-out;
+	transform: scaleX(0);
+	transform-origin: center;
+}
+
+.button.BGSlide:hover::before{
+	transform: scaleX(1.0);
+}
+
+.button.BGSlide{
+	transition: color 150ms ease-in-out;
+	transition: scale 150ms ease-in-out;
+	z-index: 1;
+}
+
+.button.BGSlide:hover{
+	color: white;
+	transform: scale(1.06);
+}
+
+.button.main.BGSlide.bMove{
+	animation: 0.25s linear 28s 2 forwards btnAnim,
+	0.25s linear 30s 2 forwards btnAnim,
+	0.25s linear 32s 2 forwards btnAnim,
+	0.25s linear 34s 2 forwards btnAnim,
+	0.25s linear 36s 2 forwards btnAnim,
+	0.25s linear 38s 2 forwards btnAnim,
+	0.25s linear 40s 2 forwards btnAnim,
+	0.25s linear 42s 2 forwards btnAnim,
+	0.25s linear 44s 2 forwards btnAnim,
+	0.25s linear 46s 2 forwards btnAnim;
+}
+
+@keyframes btnAnim{
+	0%{		
+		transform: rotate(0);
+	}
+
+	25%{		
+		transform: rotate(3deg);
+	}
+
+	75%{		
+		transform: rotate(-3deg);
+	}
+
+	100%{		
+		transform: rotate(0);
+	}
 }
 
 .text{
@@ -194,7 +266,4 @@ p{
 	Right: 50%;
 	bottom: 0%;
     transform: translate(50%,0%);
-}
-
-.finish{
 }
