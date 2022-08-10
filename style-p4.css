@@ -263,7 +263,67 @@ p{
 	object-fit: cover;
 	z-index: 5;
 	position: absolute;
-	Right: 50%;
+	Left: 50%;
 	bottom: 0%;
-    transform: translate(50%,0%);
+    transform: translate(-50%,0%);
+}
+
+@media (max-width: 900px){
+	body{
+		--viewportMarginRight2: 2em;
+	}
+
+	p{
+		font-size: .9em;
+	}
+
+	.button{
+		font-size: 1em;
+	}
+
+	.text{
+		left: 50%;
+		transform: translate(-50%,0%);
+		bottom: 80%;
+		background: var(--clr-white);
+		height: 3.3em;
+		line-height: 1em;
+		padding-right: 0.6em;
+		padding-left: 0.6em;
+		border-radius: 10px;
+	}
+
+	.p2{
+		display: block;
+		font-size: .65em;
+		text-align: center;
+	}
+
+	.videox{
+		width: auto;
+		height: 100vh;	
+		position: absolute;
+		left: 50%;
+		top: 50%;
+  		transform: translate(-50%,-50%);   	  
+	}
+
+	.columns{
+		display: none;
+	}
+
+	.site{
+		display: none;
+	}
+
+	.navigationBtn{
+		right: 50%;
+		transform: translate(50%,0%);
+		margin-right: 0;
+		gap: 1.3em;
+	}
+
+	.nMove{
+		right: 50%;
+	}
 }

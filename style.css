@@ -191,7 +191,49 @@ p{
 	object-fit: cover;
 	z-index: 5;
 	position: absolute;
-	Right: 50%;
+	Left: 50%;
 	bottom: 0%;
-    transform: translate(50%,0%);
+    transform: translate(-50%,0%);
+}
+
+.p2{
+	display: none;
+}
+
+@media (max-width: 900px){
+	body{
+		--viewportMarginRight2: 2em;
+	}
+
+	p{
+		font-size: .9em;
+	}
+
+	.p1{
+		display: none;
+	}
+
+	.p2{
+		display: block;
+		font-size: .65em;
+		line-height: 1.6em;
+	}
+
+	.button{
+		font-size: 1em;
+	}
+
+	.text{
+		left: 0%;
+		transform: translate(30%,2.3%);
+	}
+
+	.videox{
+		width: auto;
+		height: 50vh;	
+		position: absolute;
+		left: 50%;
+		top: 46%;
+  		transform: translate(-50%,-50%);   	  
+	}
 }
