@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Fitting Room</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<link rel="stylesheet" href="style-p1.css" />
 	<script src="jquery-3.6.0.min.js"></script>	
@@ -10,14 +10,14 @@
 	<div class="container">
 		<!--Simulation section start-->
 		<div class="simulationSection">
-			<div class="panelOne">
+			<div class="panelOne skip">
 				<div id="planelOneText">
 						<svg class="playIcon" id="play"><use href="#playIcon"></use></svg>
 						<svg class="playIcon" id="speedone"><use href="#playIcon SpeedOne"></use></svg>
 						<svg class="playIcon" id="speedtwo"><use href="#playIcon SpeedTwo"></use></svg>
 				</div>
 			</div>
-			<div class="panelTwo">
+			<div class="panelTwo skip">
 				<div id="planelTwoText">
 					<p class="description show" id="description-1">
 						Spatial Prototype<br>
@@ -67,27 +67,27 @@
 			<!--video player start-->
 			<div class="videoPlayer">	
 				<div class="videos">
-					<video class="videox active" id="phaseOneV1" muted autoplay loop>
+					<video class="videox active" id="phaseOneV1" muted autoplay loop playsinline>
 						<source src="Assets/Phase1/01-1.mov" type="video/quicktime" alt="">
 						<source src="Assets/Phase1/01.webm" type="video/webm" alt="">
 					</video>
-					<video class="videox" id="phaseOneV2" loop>
+					<video class="videox" id="phaseOneV2" loop playsinline>
 						<source src="Assets/Phase1/02-1.mov" type="video/quicktime" alt="">
 						<source src="Assets/Phase1/02.webm" type="video/webm" alt="">
 					</video>
-					<video class="videox" id="phaseOneV3" loop>
+					<video class="videox" id="phaseOneV3" loop playsinline>
 						<source src="Assets/Phase1/03-1.mov" type="video/quicktime" alt="">
 						<source src="Assets/Phase1/03.webm" type="video/webm" alt="">
 					</video>
-					<video class="videox" id="phaseOneV4" loop>
+					<video class="videox" id="phaseOneV4" loop playsinline>
 						<source src="Assets/Phase1/04-1.mov" type="video/quicktime" alt="">
 						<source src="Assets/Phase1/04.webm" type="video/webm" alt="">
 					</video>
-					<video class="videox" id="phaseOneV5" loop>
+					<video class="videox" id="phaseOneV5" loop playsinline>
 						<source src="Assets/Phase1/05-1.mov" type="video/quicktime" alt="">
 						<source src="Assets/Phase1/05.webm" type="video/webm" alt="">
 					</video>
-					<video class="videox" id="phaseOneV6" loop>
+					<video class="videox" id="phaseOneV6" loop playsinline>
 						<source src="Assets/Phase1/06-1.mov" type="video/quicktime" alt="">
 						<source src="Assets/Phase1/06.webm" type="video/webm" alt="">
 					</video>
@@ -104,27 +104,27 @@
 				<div class="slides" id="slides">						
 					<div class="slide x">
 						<div class="checkIcon"><img id="check-1" src="Assets/Fonts/check.png" alt="" ></div>
-						<img class="imgHover" id="phaseOne1" src="Assets/Phase1/1.png" alt="" >
+						<img class="imgHover imgS" id="phaseOne1" src="Assets/Phase1/1.png" alt="" >
 					</div>
 					<div class="slide x">
 						<div class="checkIcon"><img id="check-2" src="Assets/Fonts/check.png" alt="" ></div>
-						<img class="imgHover" id="phaseOne2" src="Assets/Phase1/2.png" alt="">
+						<img class="imgHover imgS" id="phaseOne2" src="Assets/Phase1/2.png" alt="">
 					</div>				
 					<div class="slide x">
 						<div class="checkIcon"><img id="check-3" src="Assets/Fonts/check.png" alt="" ></div>
-						<img class="imgHover" id="phaseOne3" src="Assets/Phase1/4.png" alt="">
+						<img class="imgHover imgS" id="phaseOne3" src="Assets/Phase1/4.png" alt="">
 					</div>
 					<div class="slide x">
 						<div class="checkIcon"><img id="check-4" src="Assets/Fonts/check.png" alt="" ></div>
-						<img class="imgHover" id="phaseOne4" src="Assets/Phase1/5.png" alt="">
+						<img class="imgHover imgS" id="phaseOne4" src="Assets/Phase1/5.png" alt="">
 					</div>
 					<div class="slide x">
 						<div class="checkIcon"><img id="check-5" src="Assets/Fonts/check.png" alt="" ></div>
-						<img class="imgHover" id="phaseOne5" src="Assets/Phase1/6.png" alt="">
+						<img class="imgHover imgS" id="phaseOne5" src="Assets/Phase1/6.png" alt="">
 					</div>
 					<div class="slide x">
 						<div class="checkIcon"><img id="check-6" src="Assets/Fonts/check.png" alt="" ></div>
-						<img class="imgHover" id="phaseOne6" src="Assets/Phase1/3.png" alt="">
+						<img class="imgHover imgS" id="phaseOne6" src="Assets/Phase1/3.png" alt="">
 					</div>			
 				</div>		
 
@@ -142,25 +142,33 @@
 
 			<!--instruction start-->
 			<div class="instruction">
-				<div class="column">
+				<div class="column marginL">
 					<div class="step Active">1</div>
-					<h3>Arch-Element</h3>
-					<div class="pWrap"><p>Select one spatial element that meets your design envrionment.</p></div>
+					<h3  class="skip">Arch-Element</h3>
+					<div class="pWrap skip"><p>Select one spatial element that meets your design envrionment.</p></div>
 				</div>
 				<div class="column gap">></div>
 				<div class="column">
 					<div class="step">2</div>
-					<h3>Phygital Library</h3>
-					<div class="pWrap"><p>Select a set of physical and digital materials that helps your design progress.</p></div>
+					<h3  class="skip">Phygital Library</h3>
+					<div class="pWrap skip"><p>Select a set of physical and digital materials that helps your design progress.</p></div>
 				</div>
 				<div class="column gap">></div>
-				<div class="column long">
+				<div class="column marginR long">
 					<div class="step">3</div>
-					<h3>Tailor Environment</h3>
-					<div class="pWrap"><p>Apply those element choices to customize your design envrionment.</p></div>
+					<h3  class="skip">Tailor Environment</h3>
+					<div class="pWrap skip"><p>Apply those element choices to customize your design envrionment.</p></div>
 				</div>
 			</div>
 			<!--instruction end-->
+
+			<div class="moblieH3 marginL">
+				<h3>Arch-Element</h3>
+			</div>
+
+			<div class="moblieP marginL2 marginR">
+				<p>Select one spatial element that meets your design envrionment.</p>
+			</div>
 
 			<!--navigation button start-->
 			<div class="navigationBtn">

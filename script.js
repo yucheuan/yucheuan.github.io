@@ -1,8 +1,12 @@
 var currentImg = $('.active');
 var x = 1;
 
+
 if(document.querySelector('#phaseThreeV1') != null)
 {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.getElementById('phaseThreeV1').play();
+    }
     //console.log("ok!");
     document.getElementById('phaseThreeV1').playbackRate=15.0;
 }
