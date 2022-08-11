@@ -541,7 +541,8 @@ p{
 
 	.slides{
 		width: 180%;
-		margin-top: 10%;
+		margin-top: 10%;		
+		margin-left: 33px;
 	}
 
 	#phaseOne6{

@@ -261,7 +261,7 @@ p{
 
 /*img size fit*/
 
-.slide img{
+.imgS{
 	width: auto;
 	height: 20vh;	
 	position: absolute;
@@ -441,4 +441,187 @@ p{
 .button.BGSlide:hover{
 	color: white;
 	transform: scale(1.06);
+}
+
+@media (max-width: 900px){
+	body{
+		--viewportMarginRight2: 2em;
+	}
+
+	p{
+		font-size: .9em;		
+		margin-top: 0;
+	}
+
+	.button{
+		font-size: 1em;
+		margin-bottom: 0;
+		margin-right: var(--viewportMarginRight2);
+		margin-left: var(--viewportMarginRight2);
+	}
+
+	.text{
+		left: 0%;
+		transform: translate(30%,2.3%);
+	}
+
+	.videox{
+		width: auto;
+		height: 53.5vh;	
+		position: absolute;
+		left: 50%;
+		/*vid height*/
+		top: 73.5%;
+  		transform: translate(-50%,-50%);   	  
+	}
+
+	.navigationBtn{
+		height: auto;
+		width: 100vw;
+		margin-right: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		display: flex;		
+    	align-items: flex-start;
+		justify-content: space-between;
+		gap: 1.3em;
+		position: fixed;
+		/*height*/
+		bottom: 4%;
+		right: 0;
+	}
+
+	.skip{
+		display: none;
+	}
+
+	.container{
+		flex-direction: column;
+	}
+
+	.simulationSection{
+		flex: 1 0 0%;
+		/*height*/
+		height: 56.6%;
+		align-content: center;
+		position: relative;
+	}
+
+	.manualSection{
+		flex: 1 0 0%;
+		overflow: visible;
+		position: relative;
+	}
+
+	.videoPlayer{
+		height: 100%;
+	}
+
+	.instruction{
+		width: 100%;
+		position: fixed;
+		top: 5%;		
+		margin-right: 0;
+		height: 0;
+	}
+
+	.slider{
+		height: 30%;
+		margin-right: 0;
+		overflow: visible;
+	}
+
+	.slides{
+		width: 180%;
+		margin-top: 10%;		
+		margin-left: -22.5px;
+	}
+
+	#phaseOne6{
+		width: 115%;
+		height: auto;
+	}
+
+	#phaseOne6:hover{
+		width: 126%;
+		height: auto;
+	}
+
+	.imgS{
+		width: 104%;
+		height: auto;
+	}
+
+	.imgHover:hover{
+		width: 115%;
+		height: auto;
+	}
+
+	.checkIcon img{
+		top: -20%;
+		right: 45%;
+	}
+
+	.rangeSlider{
+		margin-top: 0%;
+		position: fixed;
+		/*height*/
+		bottom: 14%;
+		right: 0; 
+		width: calc(100% - 4em);
+		margin-right: var(--viewportMarginRight2);
+	}
+
+	.rangeSlider.width{
+		width: calc(100% - 4em);
+	}
+
+	#slider{
+		height: 1.475em;
+	}
+
+	#slider::-webkit-slider-thumb{
+		font-size: 3em;
+	}
+
+	.marginL{
+		margin-left: var(--viewportMarginRight2);
+	}
+
+	.marginL2{
+		margin-left: 43vw;
+	}
+
+	.marginR{
+		margin-right: var(--viewportMarginRight2);
+	}
+
+	.step{
+		font-size: 1em;
+	}
+
+	.pWrap{
+		font-size: 0.7em;
+	}
+
+	h3{
+		font-size: 1em;		
+		margin-top: 0;
+	}
+
+	.column.gap{
+		font-size: 1em;
+	}
+
+	.moblieH3{
+		display: block;
+		position: fixed;
+		top: 11%;
+	}
+
+	.moblieP{		
+		display: block;	
+		position: fixed;
+		top: 11%;
+	}
 }
