@@ -185,15 +185,106 @@ p{
 	margin-bottom: 6vh;
 
 	height: 15vh;
-	/*margin-right: var(--viewportMarginRight2);*/
+	margin-right: var(--viewportMarginRight2);
 	justify-content: flex-end;
 	align-items: flex-end;
 	object-fit: cover;
 	z-index: 5;
 	position: absolute;
-	Left: 50%;
+	Left: 0%;
 	bottom: 0%;
-    transform: translate(-50%,0%);
+    transform: translate(50%,0%);
+}
+
+.info{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-bottom: 6vh;
+
+	width: 2.5vw;
+	margin-left: var(--viewportMarginRight2);
+	position: absolute;
+	Left: 0%;
+	bottom: 0%;
+    transform: translate(0%,-15%);
+    cursor: pointer;
+}
+
+.info2{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 6vh;
+	background: var(--clr-white);	
+	border-radius: 0.5em;
+
+	width: 18.5vw;
+	height: 21vw;
+	padding-top: .5vw;
+	padding-bottom: .5vw;
+	margin-left: var(--viewportMarginRight2);
+	position: absolute;
+	Left: 0%;
+	bottom: 0%;
+    transform: translate(2.5%,-90%);
+    cursor: pointer;
+}
+
+.info3{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 6vh;
+	background: var(--clr-white);	
+	border-radius: 0.5em;
+
+	width: 18.5vw;
+	height: 14vw;
+	padding-top: .5vw;
+	padding-bottom: .5vw;
+	margin-left: var(--viewportMarginRight2);
+	position: absolute;
+	Left: 0%;
+	bottom: 0%;
+    transform: translate(2.5%,-25%);
+    cursor: pointer;
+}
+
+.planelTwoText{
+	position: relative;
+}
+
+.align{
+	font-size: .8vw;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.h3{
+	font-size: 1.2vw;
+    margin-top: 15%;
+    margin-bottom: 7.5%;
+    color: var(--clr-blue);    
+    font-weight: bold;
+    text-align: center;
+}
+
+.pb{	    
+    font-weight: bold;
+}
+
+.description {
+	display:  none;
+}
+
+.description.show {
+	display:  block;
+}
+
+.info img{
+	width: 90%;
 }
 
 .p2{

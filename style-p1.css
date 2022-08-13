@@ -444,12 +444,17 @@ p{
 }
 
 .moblieH3{
-		display: none;
-	}
+	display: none;
+}
 
-	.moblieP{		
-		display: none;	
-	}
+.moblieP{		
+	display: none;	
+}
+
+.limited{
+	opacity: 0.7;
+	pointer-events: none;
+}
 
 @media (max-width: 900px){
 	body{

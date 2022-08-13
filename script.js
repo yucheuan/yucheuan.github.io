@@ -1,6 +1,5 @@
 var currentImg = $('.active');
-var x = 1;
-
+var x = 1;   
 
 if(document.querySelector('#phaseThreeV1') != null)
 {
@@ -10,6 +9,18 @@ if(document.querySelector('#phaseThreeV1') != null)
     //console.log("ok!");
     document.getElementById('phaseThreeV1').playbackRate=15.0;
 }
+
+/*cover info*/
+$('#check-info').click(function(){
+    if($('#info2').hasClass('show') == true){
+        $('#info2').removeClass('show');
+        $('#info3').removeClass('show');
+    }
+    else{
+        $('#info2').addClass('show');
+        $('#info3').addClass('show');
+    }
+});
 
 /*range slider button*/
 var slider = document.getElementById('slider');
@@ -30,6 +41,7 @@ if(slider != null ){
     });
 }
 
+/*switch videos*/
 
 $('#phaseOne1').click(function() {
     /*For Info-panel .show*/
@@ -51,6 +63,17 @@ $('#phaseOne1').click(function() {
     defaultActiveStatus1();
     defaultActiveStatus2();
     defaultActiveStatus3();
+
+    if(document.querySelector('#valueBtn') != null){   
+        check01();
+    }
+    else{
+        check1();
+    }
+
+    /*remove limitation of nextBtn*/
+    $('#nextBtn').removeClass('limited');
+    $('#comfirmBtn').removeClass('limited');
 });
 
 $('#phaseOne2').click(function() { 
@@ -69,6 +92,15 @@ $('#phaseOne2').click(function() {
     defaultActiveStatus1();
     defaultActiveStatus2();
     defaultActiveStatus3();
+
+    if(document.querySelector('#valueBtn') != null){ 
+        check02();
+    }
+    else{
+        check2();
+    }
+
+    $('#nextBtn').removeClass('limited');
 });
 
 $('#phaseOne3').click(function() {
@@ -87,6 +119,15 @@ $('#phaseOne3').click(function() {
     defaultActiveStatus1();
     defaultActiveStatus2();
     defaultActiveStatus3();
+
+    if(document.querySelector('#valueBtn') != null){ 
+        check03();
+    }
+    else{
+        check3();
+    }
+
+    $('#nextBtn').removeClass('limited');
 });
 
 $('#phaseOne4').click(function() {
@@ -105,6 +146,15 @@ $('#phaseOne4').click(function() {
     defaultActiveStatus1();
     defaultActiveStatus2();
     defaultActiveStatus3();
+
+    if(document.querySelector('#valueBtn') != null){ 
+        check04();
+    }
+    else{
+        check4();
+    }
+    
+    $('#nextBtn').removeClass('limited');
 });
 
 $('#phaseOne5').click(function() {
@@ -123,6 +173,15 @@ $('#phaseOne5').click(function() {
     defaultActiveStatus1();
     defaultActiveStatus2();
     defaultActiveStatus3();
+
+    if(document.querySelector('#valueBtn') != null){ 
+        check05();
+    }
+    else{
+        check5();
+    }
+    
+    $('#nextBtn').removeClass('limited');
 });
 
 $('#phaseOne6').click(function(){
@@ -141,6 +200,15 @@ $('#phaseOne6').click(function(){
     defaultActiveStatus1();
     defaultActiveStatus2();
     defaultActiveStatus3();
+
+    if(document.querySelector('#valueBtn') != null){ 
+        check06();
+    }
+    else{
+        check6();
+    }
+    
+    $('#nextBtn').removeClass('limited');
 });
 
 $('#phaseOne7').click(function(){
@@ -159,6 +227,40 @@ $('#phaseOne7').click(function(){
     defaultActiveStatus1();
     defaultActiveStatus2();
     defaultActiveStatus3();
+
+    if(document.querySelector('#valueBtn') != null){ 
+        check07();
+    }
+    else{
+        check7();
+    }
+    
+    $('#nextBtn').removeClass('limited');
+});
+
+$('#phaseThree2').click(function() {
+    check2();
+    $('#comfirmBtn').removeClass('limited');
+});
+
+$('#phaseThree3').click(function() {
+    check3();
+    $('#comfirmBtn').removeClass('limited');
+});
+
+$('#phaseThree4').click(function() {
+    check4();
+    $('#comfirmBtn').removeClass('limited');
+});
+
+$('#phaseThree5').click(function() {
+    check5();
+    $('#comfirmBtn').removeClass('limited');
+});
+
+$('#phaseThree6').click(function() {
+    check6();
+    $('#comfirmBtn').removeClass('limited');
 });
 
 /*control menu status*/
@@ -554,7 +656,7 @@ $('#speedtwo').click(function(){
 
 /*toggle check icons*/
 
-$('#check1').click(function() {
+var check1 = function() {
     var currentIcon = document.getElementById('check1');
 
     if(currentIcon.src.match('Assets/Fonts/check.png')){
@@ -563,9 +665,9 @@ $('#check1').click(function() {
     else{
         currentIcon.src = 'Assets/Fonts/check.png';
     }
-})
+}
 
-$('#check2').click(function() {
+var check2 = function() {
     var currentIcon = document.getElementById('check2');
 
     if(currentIcon.src.match('Assets/Fonts/check.png')){
@@ -574,9 +676,9 @@ $('#check2').click(function() {
     else{
         currentIcon.src = 'Assets/Fonts/check.png';
     }
-})
+}
 
-$('#check3').click(function() {
+var check3 = function() {
     var currentIcon = document.getElementById('check3');
 
     if(currentIcon.src.match('Assets/Fonts/check.png')){
@@ -585,9 +687,9 @@ $('#check3').click(function() {
     else{
         currentIcon.src = 'Assets/Fonts/check.png';
     }
-})
+}
 
-$('#check4').click(function() {
+var check4 = function() {
     var currentIcon = document.getElementById('check4');
 
     if(currentIcon.src.match('Assets/Fonts/check.png')){
@@ -596,9 +698,9 @@ $('#check4').click(function() {
     else{
         currentIcon.src = 'Assets/Fonts/check.png';
     }
-})
+}
 
-$('#check5').click(function() {
+var check5 = function() {
     var currentIcon = document.getElementById('check5');
 
     if(currentIcon.src.match('Assets/Fonts/check.png')){
@@ -607,9 +709,9 @@ $('#check5').click(function() {
     else{
         currentIcon.src = 'Assets/Fonts/check.png';
     }
-})
+}
 
-$('#check6').click(function() {
+var check6 = function() {
     var currentIcon = document.getElementById('check6');
 
     if(currentIcon.src.match('Assets/Fonts/check.png')){
@@ -618,9 +720,9 @@ $('#check6').click(function() {
     else{
         currentIcon.src = 'Assets/Fonts/check.png';
     }
-})
+}
 
-$('#check7').click(function() {
+var check7 = function() {
     var currentIcon = document.getElementById('check7');
 
     if(currentIcon.src.match('Assets/Fonts/check.png')){
@@ -629,66 +731,118 @@ $('#check7').click(function() {
     else{
         currentIcon.src = 'Assets/Fonts/check.png';
     }
+}
+
+$('#check1').click(function() {
+    check1();
+})
+
+$('#check2').click(function() {
+    check2();
+})
+
+$('#check3').click(function() {
+    check3();
+})
+
+$('#check4').click(function() {
+    check4();
+})
+
+$('#check5').click(function() {
+    check5();
+})
+
+$('#check6').click(function() {
+    check6();
+})
+
+$('#check7').click(function() {
+    check7();
 })
 
 /*toggle one icon only*/
 
-$('#check-1').click(function() {
+var check01 = function() {
     document.getElementById('check-1').src = 'Assets/Fonts/check-toggle.png';
     document.getElementById('check-2').src = 'Assets/Fonts/check.png';
     document.getElementById('check-3').src = 'Assets/Fonts/check.png';
     document.getElementById('check-4').src = 'Assets/Fonts/check.png';
     document.getElementById('check-5').src = 'Assets/Fonts/check.png';
     document.getElementById('check-6').src = 'Assets/Fonts/check.png';
-})
+}
 
-$('#check-2').click(function() {
+var check02 = function() {
     document.getElementById('check-1').src = 'Assets/Fonts/check.png';
     document.getElementById('check-2').src = 'Assets/Fonts/check-toggle.png';
     document.getElementById('check-3').src = 'Assets/Fonts/check.png';
     document.getElementById('check-4').src = 'Assets/Fonts/check.png';
     document.getElementById('check-5').src = 'Assets/Fonts/check.png';
     document.getElementById('check-6').src = 'Assets/Fonts/check.png';
-})
+}
 
-$('#check-3').click(function() {
+var check03 = function() {
     document.getElementById('check-1').src = 'Assets/Fonts/check.png';
     document.getElementById('check-2').src = 'Assets/Fonts/check.png';
     document.getElementById('check-3').src = 'Assets/Fonts/check-toggle.png';
     document.getElementById('check-4').src = 'Assets/Fonts/check.png';
     document.getElementById('check-5').src = 'Assets/Fonts/check.png';
     document.getElementById('check-6').src = 'Assets/Fonts/check.png';
-})
+}
 
-$('#check-4').click(function() {
+var check04 = function() {
     document.getElementById('check-1').src = 'Assets/Fonts/check.png';
     document.getElementById('check-2').src = 'Assets/Fonts/check.png';
     document.getElementById('check-3').src = 'Assets/Fonts/check.png';
     document.getElementById('check-4').src = 'Assets/Fonts/check-toggle.png';
     document.getElementById('check-5').src = 'Assets/Fonts/check.png';
     document.getElementById('check-6').src = 'Assets/Fonts/check.png';
-})
+}
 
-$('#check-5').click(function() {
+var check05 = function() {
     document.getElementById('check-1').src = 'Assets/Fonts/check.png';
     document.getElementById('check-2').src = 'Assets/Fonts/check.png';
     document.getElementById('check-3').src = 'Assets/Fonts/check.png';
     document.getElementById('check-4').src = 'Assets/Fonts/check.png';
     document.getElementById('check-5').src = 'Assets/Fonts/check-toggle.png';
     document.getElementById('check-6').src = 'Assets/Fonts/check.png';
-})
+}
 
-$('#check-6').click(function() {
+var check06 = function() {
     document.getElementById('check-1').src = 'Assets/Fonts/check.png';
     document.getElementById('check-2').src = 'Assets/Fonts/check.png';
     document.getElementById('check-3').src = 'Assets/Fonts/check.png';
     document.getElementById('check-4').src = 'Assets/Fonts/check.png';
     document.getElementById('check-5').src = 'Assets/Fonts/check.png';
     document.getElementById('check-6').src = 'Assets/Fonts/check-toggle.png';
+}
+
+$('#check-1').click(function() {
+    check1();
+})
+
+$('#check-2').click(function() {
+    check2();
+})
+
+$('#check-3').click(function() {
+    check3();
+})
+
+$('#check-4').click(function() {
+    check4();
+})
+
+$('#check-5').click(function() {
+    check5();
+})
+
+$('#check-6').click(function() {
+    check6();
 })
             
 /*time-Updated Simulation page-3*/
-
+/*
 const p3Video = document.querySelector('.autoVid')
 if(p3Video != null){        
     p3Video.playbackRate=0.92
@@ -737,6 +891,7 @@ if(p3Video != null){
         }
     })
 }        
+*/
 
 /*time-Updated Simulation page-4*/
 
@@ -760,49 +915,49 @@ if(p4Video != null){
         if (currentTime > 6.08 && currentTime < 7) {
         console.log('in');
         //console.log(animationTrigger);
-        document.getElementById('check1').src = 'Assets/Fonts/check-toggle.png';
+        document.getElementById('check01').src = 'Assets/Fonts/check-toggle.png';
         }
 
         if (currentTime > 11.1 && currentTime < 12) {
         console.log('in2');
         //console.log(animationTrigger);
 
-        document.getElementById('check2').src = 'Assets/Fonts/check-toggle.png';
+        document.getElementById('check02').src = 'Assets/Fonts/check-toggle.png';
         }
 
         if (currentTime > 15.2 && currentTime < 16) {
         console.log('in3');
         //console.log(animationTrigger);
 
-        document.getElementById('check3').src = 'Assets/Fonts/check-toggle.png';
+        document.getElementById('check03').src = 'Assets/Fonts/check-toggle.png';
         }
 
         if (currentTime > 23.3 && currentTime < 24) {
         console.log('in4');
         //console.log(animationTrigger);
 
-        document.getElementById('check4').src = 'Assets/Fonts/check-toggle.png';
+        document.getElementById('check04').src = 'Assets/Fonts/check-toggle.png';
         }
 
         if (currentTime > 27.7 && currentTime < 29) {
         console.log('in5');
         //console.log(animationTrigger);
 
-        document.getElementById('check5').src = 'Assets/Fonts/check-toggle.png';
+        document.getElementById('check05').src = 'Assets/Fonts/check-toggle.png';
         }
 
         if (currentTime > 32.1 && currentTime < 33) {
         console.log('in6');
         //console.log(animationTrigger);
 
-        document.getElementById('check6').src = 'Assets/Fonts/check-toggle.png';
+        document.getElementById('check06').src = 'Assets/Fonts/check-toggle.png';
         }
 
         if (currentTime > 38 && currentTime < 38.1) {
         console.log('in7');
         //console.log(animationTrigger);
 
-        document.getElementById('check6').src = 'Assets/Fonts/check-toggle.png';
+        document.getElementById('check07').src = 'Assets/Fonts/check-toggle.png';
         }
     })
 }

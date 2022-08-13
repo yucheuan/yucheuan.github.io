@@ -443,6 +443,19 @@ p{
 	transform: scale(1.06);
 }
 
+.moblieH3{
+	display: none;
+}
+
+.moblieP{		
+	display: none;	
+}
+
+.limited{
+	opacity: 0.7;
+	pointer-events: none;
+}
+
 @media (max-width: 900px){
 	body{
 		--viewportMarginRight2: 2em;

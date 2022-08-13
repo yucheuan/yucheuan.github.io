@@ -7,7 +7,12 @@
 	<script src="jquery-3.6.0.min.js"></script>	
 </head>
 <body>	
-	<div class="container">
+	<button class="valueElem" id="valueBtn" onclick=" passPageValue()"></button>
+	<style>
+		.valueElem{display: none;}
+	</style>
+
+	<div class="container" id="xxx">
 		<!--Simulation section start-->
 		<div class="simulationSection">
 			<div class="panelOne skip">
@@ -173,7 +178,7 @@
 			<!--navigation button start-->
 			<div class="navigationBtn">
 				<a href="index.html" class="button BGSlide">BACK</a>
-				<a href="index-p2.html" class="button BGSlide">NEXT</a>
+				<a href="index-p2.html" class="button BGSlide limited" id="nextBtn">NEXT</a>
 			</div>
 			<!--navigation button end-->
 
