@@ -33,6 +33,7 @@ body{
 	--clr-blue: #1939d4;
 	--clr-white: rgba(255, 255, 255, .7);
 	--clr-shadow: rgba(0, 0, 0, .65);
+	--clr-shadow2: rgba(15, 34, 128, .65);
 	--clr-bg: #E9E6D9;
 	/*background-image: url(Assets/BG1.jpg);*/
 }
@@ -152,6 +153,9 @@ p{
 }
 
 .site{
+	display: flex;
+	flex-direction: column;
+	width: 16%;
 	height: 15vh;
 	margin-right: var(--viewportMarginRight2);
 	position: absolute;
@@ -162,13 +166,62 @@ p{
 }
 
 .site img{
-	width: auto;
-	height: 100%;
-	border-radius: 10px;
+	width: 100%;
+	height: auto;
+	border-radius: 11px;
 }
 
 .sMove{
 	right: 0%;
+}
+
+.siteText{
+	margin-top: 15%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.siteText2{
+	margin-top: 15%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.stepx{
+	width: 85%;	
+	margin-bottom: 0;
+}
+
+.stepx2{
+	width: 85%;	
+	margin-bottom: 0;
+	font-size: .7vw;
+}
+
+.stepx::before{	
+	content: '';
+	position: absolute;
+	top: -1.8vh;
+	bottom: -1.8vh;
+	left: 0;
+	right: 0;		
+	border-radius: .5em;		
+	z-index: -1;
+	background: var(--clr-white);
+}
+
+.stepx2::before{	
+	content: '';
+	position: absolute;
+	top: -.25vh;
+	bottom: -.25vh;
+	left: 0;
+	right: 0;		
+	border-radius: .5em;		
+	z-index: -1;
+	background: var(--clr-white);
 }
 
 /*Button*/
@@ -268,7 +321,11 @@ p{
     transform: translate(-50%,0%);
 }
 
-@media (max-width: 900px){
+.siteText3{
+	display: none;
+}
+
+@media (max-width: 450px){
 	body{
 		--viewportMarginRight2: 2em;
 	}
@@ -372,8 +429,8 @@ p{
 	.step2::before{	
 		content: '';
 		position: absolute;
-		top: 0;
-		bottom: 0;
+		top: -1.5vw;
+		bottom: -2vw;
 		left: -35vw;
 		right: 0;
 		border-radius: 0.5em;
@@ -406,11 +463,47 @@ p{
 		display: block;
 		position: fixed;
 		top: 0%;
+		transform: translateX(10px);		
 	}
 
 	.moblieP{		
 		display: block;	
 		position: fixed;
 		top: 0%;
+	}
+
+	.siteText3{
+		display: block;
+		width: calc(100% - 4em);
+		height: auto;
+		position: fixed;
+		top: 22%;
+    	left: 50%;
+    	transform: translate(-50%,0%);
+    	display: flex;
+    	justify-content: center;
+	}
+
+	.stepx3{
+		width: 100%;
+		font-size: 0.65em;		
+		margin-bottom: 0;
+		text-align: center;		
+	}
+
+	.step3{
+		position: relative;
+	}
+
+	.step3::before{	
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 0.25em;
+		z-index: -1;
+		background: var(--clr-white);
 	}
 }

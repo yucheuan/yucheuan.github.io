@@ -15,10 +15,12 @@ $('#check-info').click(function(){
     if($('#info2').hasClass('show') == true){
         $('#info2').removeClass('show');
         $('#info3').removeClass('show');
+        document.getElementById('check-info').src = 'Assets/Fonts/info.png';
     }
     else{
         $('#info2').addClass('show');
         $('#info3').addClass('show');
+        document.getElementById('check-info').src = 'Assets/Fonts/info-toggle.png';
     }
 });
 
@@ -304,6 +306,38 @@ var defaultActiveStatus3 = function() {
         $('#t3').addClass('tActive');
     }
 }
+
+/*control menu status :hover*/
+
+$( '#play' ).hover(
+  function() {
+    $('#c1').addClass('cHover');    
+    $('#t1').addClass('t1Hover');
+  }, function() {
+    $('#c1').removeClass('cHover');
+    $('#t1').removeClass('t1Hover');
+  }
+);
+
+$( '#speedone' ).hover(
+  function() {
+    $('#c2').addClass('cHover');    
+    $('#t2').addClass('tHover');
+  }, function() {
+    $('#c2').removeClass('cHover');
+    $('#t2').removeClass('tHover');
+  }
+);
+
+$( '#speedtwo' ).hover(
+  function() {
+    $('#c3').addClass('cHover');    
+    $('#t3').addClass('tHover');
+  }, function() {
+    $('#c3').removeClass('cHover');
+    $('#t3').removeClass('tHover');
+  }
+);
 
 /*play & pause*/
 

@@ -196,61 +196,47 @@ p{
     transform: translate(50%,0%);
 }
 
+.coverInfo{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+    Left: 0%;
+    bottom: 0%;
+    transform: translate(2.5%,0%);
+    margin-bottom: 8vh;
+}
+
 .info{
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
 	margin-bottom: 6vh;
 
-	width: 2.5vw;
+	width: 2.2vw;
 	margin-left: var(--viewportMarginRight2);
 	position: absolute;
 	Left: 0%;
 	bottom: 0%;
-    transform: translate(0%,-15%);
+    transform: translate(0%,-22.5%);
     cursor: pointer;
+	z-index: 5;
 }
 
 .info2{
-	display: flex;
-	justify-content: center;
-	margin-bottom: 6vh;
-	background: var(--clr-white);	
-	border-radius: 0.5em;
-
-	width: 18.5vw;
-	height: 21vw;
-	padding-top: .5vw;
-	padding-bottom: .5vw;
 	margin-left: var(--viewportMarginRight2);
-	position: absolute;
-	Left: 0%;
-	bottom: 0%;
-    transform: translate(2.5%,-90%);
     cursor: pointer;
+    position: relative;
 }
 
 .info3{
-	display: flex;
-	justify-content: center;
-	margin-bottom: 6vh;
-	background: var(--clr-white);	
-	border-radius: 0.5em;
+	margin-bottom: 10vw;
 
-	width: 18.5vw;
-	height: 14vw;
+	width: 18vw;
 	padding-top: .5vw;
 	padding-bottom: .5vw;
 	margin-left: var(--viewportMarginRight2);
-	position: absolute;
-	Left: 0%;
-	bottom: 0%;
-    transform: translate(2.5%,-25%);
     cursor: pointer;
-}
-
-.planelTwoText{
-	position: relative;
+    position: relative;
 }
 
 .align{
@@ -259,7 +245,26 @@ p{
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	transform: translate(-50%,-136%);
+
+	background: var(--clr-white);	
+	padding: 10%;	
+	border-radius: 1em;
+	width: 80%;
+}
+
+.align2{
+	font-size: .8vw;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%,-50%);
+
+	background: var(--clr-white);	
+	padding: 10%;	
+	border-radius: 1em;
+	width: 80%;
 }
 
 .h3{
@@ -287,11 +292,16 @@ p{
 	width: 90%;
 }
 
+.info img:hover{
+	width: 93%;
+	transform: translate(2%,2%);
+}
+
 .p2{
 	display: none;
 }
 
-@media (max-width: 900px){
+@media (max-width: 450px){
 	body{
 		--viewportMarginRight2: 2em;
 	}
@@ -342,7 +352,7 @@ p{
 	.marginL{
 		font-size: .65em;
 		line-height: 1.6em;
-		margin-left: 2.8em;
+		margin-left: 8em;
 	}
 
 	.marginR{
@@ -352,5 +362,36 @@ p{
 	.moblieP{		
 		position: fixed;
 		bottom: 2.5%;
+	}
+
+	.coverInfo{
+    	margin-bottom: 8vh;
+	}
+
+	.info{
+		width: 8.5vw;
+		transform: translate(0%,66%);
+		z-index: 5;
+	}
+
+	.info2{
+	}
+
+	.info3{
+		width: 50vw;
+		margin-bottom: 30vw;
+	}
+
+	.h3{
+		font-size: 1.2em;
+	}
+
+	.align{
+		font-size: 0.65em;
+		transform: translate(-50%,-133%);
+	}
+
+	.align2{
+		font-size: 0.65em;
 	}
 }

@@ -33,6 +33,7 @@ body{
 	--clr-blue: #1939d4;
 	--clr-white: rgba(255, 255, 255, .7);
 	--clr-shadow: rgba(0, 0, 0, .65);
+	--clr-shadow2: rgba(15, 34, 128, .65);
 	--clr-bg: #E9E6D9;
 	background-image: url(Assets/BG0.jpg);
 }
@@ -208,12 +209,20 @@ p{
 	stroke-width: 0.3;
 }
 
+.cHover{
+	stroke-width: 0.35;
+}
+
 .cActive{
 	fill: var(--clr-blue);
 }
 
 .t{
 	fill: var(--clr-blue);
+}
+
+.tHover{
+	transform: scale(1.03) translate(-2.5%,-1.8%);
 }
 
 .tActive{
@@ -225,9 +234,13 @@ p{
 	stroke-width: 0.3;
 }
 
+.t1Hover{
+	stroke-width: 0.35;
+}
+
 .t1Active{
 	stroke: white;
-	stroke-width: 0.4;
+	stroke-width: 0.35;
 }
 
 /*slider*/
@@ -336,6 +349,28 @@ p{
 	border-radius: 1em;
 	background: white;
 	box-shadow: 0px 1px 10px 1px var(--clr-shadow);
+}
+
+#slider::-webkit-slider-thumb:hover{
+	box-shadow: 0px 1px 10px 1px var(--clr-shadow2);
+}
+
+.autoText{
+	width: auto;
+	height: 175%;
+	position: absolute;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	border-radius: .25em;
+	top: 450%;
+	left: 0;
+	transform: translate(27%,0);
+	background: var(--clr-white);
+}
+
+.autoP{	
+	color: var(--clr-blue);
+	font-size: .7vw;
 }
 
 /*Steps*/
@@ -449,7 +484,7 @@ p{
 	pointer-events: none;
 }
 
-@media (max-width: 900px){
+@media (max-width: 450px){
 	body{
 		--viewportMarginRight2: 2em;
 	}
@@ -629,5 +664,24 @@ p{
 		display: block;	
 		position: fixed;
 		top: 11%;
+	}
+
+	.autoText{
+		width: 100vw;
+		height: auto;
+		position: fixed;
+		top: 80%;
+    	left: 50%;
+    	transform: translate(-50%,0%);
+    	display: flex;
+    	justify-content: center;
+    	background: none;
+	}
+
+	.autoP{
+		width: auto;
+		font-size: 0.65em;		
+		margin-bottom: 0;
+		text-align: center;
 	}
 }
