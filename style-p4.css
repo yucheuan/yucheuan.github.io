@@ -70,7 +70,7 @@ p{
 }
 
 .videox{
-	width: 100vw;
+	/*width: 100vw;*/
 	height: auto;	
 	position: absolute;
 	left: 50%;
