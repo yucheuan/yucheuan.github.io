@@ -477,7 +477,7 @@ p{
 		width: calc(100% - 4em);
 		height: auto;
 		position: fixed;
-		top: 22%;
+		top: 28%;
     	left: 50%;
     	transform: translate(-50%,0%);
     	display: flex;
@@ -486,7 +486,7 @@ p{
 
 	.stepx3{
 		width: 100%;
-		font-size: 0.65em;		
+		font-size: 0.5em;		
 		margin-bottom: 0;
 		text-align: center;		
 	}

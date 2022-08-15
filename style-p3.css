@@ -670,7 +670,7 @@ p{
 		width: 100vw;
 		height: auto;
 		position: fixed;
-		top: 80%;
+		top: 23%;
     	left: 50%;
     	transform: translate(-50%,0%);
     	display: flex;
@@ -679,8 +679,9 @@ p{
 	}
 
 	.autoP{
+		display: none;
 		width: auto;
-		font-size: 0.65em;		
+		font-size: 0.5em;		
 		margin-bottom: 0;
 		text-align: center;
 	}
