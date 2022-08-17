@@ -5,10 +5,12 @@
 [![](https://raw.githubusercontent.com/yucheuan/yucheuan.github.io/main/Assets/ReadMePic.PNG)](https://yucheuan.github.io/)
 <p align="center"><a href="https://yucheuan.github.io/"><strong>Explore The Website »</strong></a></p>
 
-
+### Intro
 Nowadays, fashion factories are alike other factories designed by the idea of linear economics (efficiency and profit maxima). However, there are problems without thinking of the nature of a fashion industry, which leads to a bad process of design creation.
 
 The goal of this project is to design a real-time visualization in augmented reality, which allows fashion designers to use mobile phones or AR glasses to customize their working space as well as visualize their final works in the interest of design decision-making. 
+
+(The project is a responsive website for both mobile-end and desktop-end.)
 
 ### User-flow
 ![](https://raw.githubusercontent.com/yucheuan/yucheuan.github.io/main/Assets/Frame%201.png)
