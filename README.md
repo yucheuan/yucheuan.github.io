@@ -12,8 +12,9 @@ The goal of this project is to design a real-time visualization in augmented rea
 
 (The project is a responsive website for both mobile-end and desktop-end.)
 
-### User-flow
+### User-flow & Mockups
 ![](https://raw.githubusercontent.com/yucheuan/yucheuan.github.io/main/Assets/Frame%201.png)
+![](https://raw.githubusercontent.com/yucheuan/yucheuan.github.io/main/Assets/Frame%2010.png)
 
 ### Built With
 * [JQuery](https://jquery.com/)
